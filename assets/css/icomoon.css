@@ -1,0 +1,126 @@
+@font-face {
+	font-family: "icomoon";
+	src: url("../fonts/webfonts/icomoon.ttf?edw7lx") format("truetype"), url("../fonts/webfonts/icomoon.woff?edw7lx") format("woff"), url("../fonts/webfonts/icomoon.svg?edw7lx#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^=ico-],
+[class*=" ico-"]{
+	font-family: "icomoon" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ico-edit:before {
+  content: "\e900";
+}
+.ico-phone-alt:before {
+  content: "\e901";
+}
+.ico-email-alt:before {
+  content: "\e902";
+}
+.ico-email:before {
+  content: "\e903";
+}
+.ico-headset:before {
+  content: "\e904";
+}
+.ico-location:before {
+  content: "\e905";
+}
+.ico-maps:before {
+  content: "\e906";
+}
+.ico-support:before {
+  content: "\e907";
+}
+.ico-phone:before {
+  content: "\e908";
+}
+.ico-phone-call:before {
+  content: "\e909";
+}
+.ico-tablet:before {
+  content: "\e90a";
+}
+.ico-comment:before {
+  content: "\e90b";
+}
+.ico-search:before {
+  content: "\e90c";
+}
+.ico-share:before {
+  content: "\e90d";
+}
+.ico-arrow-right:before {
+  content: "\e90e";
+}
+.ico-chat:before {
+  content: "\e90f";
+}
+.ico-emergency:before {
+  content: "\e910";
+}
+.ico-wallet:before {
+  content: "\e911";
+}
+.ico-chat-alt:before {
+  content: "\e912";
+}
+.ico-clock:before {
+  content: "\e913";
+}
+.ico-contact-alt:before {
+  content: "\e914";
+}
+.ico-contact:before {
+  content: "\e915";
+}
+.ico-support-alt:before {
+  content: "\e916";
+}
+.ico-arrow-left:before {
+  content: "\e917";
+}
+.ico-arrow-right-alt:before {
+  content: "\e918";
+}
+.ico-woman:before {
+  content: "\e919";
+}
+.ico-phone2:before {
+  content: "\e91a";
+}
+.ico-envelope:before {
+  content: "\e91b";
+}
+.ico-map-marker:before {
+  content: "\e91c";
+}
+.ico-trash:before {
+  content: "\e91d";
+}
+.ico-socicon-pinterest:before {
+  content: "\e91e";
+}
+.ico-socicon-facebook:before {
+  content: "\e91f";
+}
+.ico-socicon-linkedin:before {
+  content: "\e920";
+}
+.ico-socicon-telegram:before {
+  content: "\e921";
+}
+.ico-socicon-x-twitter:before {
+  content: "\e922";
+}

@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'specicons';
+    src: url('../webfonts/specicons/specicons.eot?u9p95x');
+    src: url('../webfonts/specicons/specicons.eot?u9p95x#iefix') format('embedded-opentype'),
+    url('../webfonts/specicons/specicons.ttf?u9p95x') format('truetype'),
+    url('../webfonts/specicons/specicons.woff?u9p95x') format('woff'),
+    url('../webfonts/specicons/specicons.svg?u9p95x#specicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="spec-"], [class*=" spec-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'specicons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.spec-art:before {
+    content: "\e900";
+}
+
+.spec-background:before {
+    content: "\e901";
+}
+
+.spec-bounding-box:before {
+    content: "\e902";
+}
+
+.spec-coordinates:before {
+    content: "\e903";
+}
+
+.spec-cube:before {
+    content: "\e904";
+}
+
+.spec-cursor:before {
+    content: "\e905";
+}
+
+.spec-edit:before {
+    content: "\e906";
+}
+
+.spec-flip:before {
+    content: "\e907";
+}
+
+.spec-foreground:before {
+    content: "\e908";
+}
+
+.spec-group:before {
+    content: "\e909";
+}
+
+.spec-mirror-horizontally:before {
+    content: "\e90a";
+}
+
+.spec-oval:before {
+    content: "\e90b";
+}
+
+.spec-rotate:before {
+    content: "\e90c";
+}
+
+.spec-spray:before {
+    content: "\e90d";
+}
+
+.spec-square:before {
+    content: "\e90e";
+}
+
+.spec-transform:before {
+    content: "\e91f";
+}
+
+.spec-unconstrained:before {
+    content: "\e910";
+}
+
+.spec-ungroup:before {
+    content: "\e911";
+}
+
+.spec-vector:before {
+    content: "\e912";
+}
+
+.spec-arrow:before {
+    content: "\e913";
+}

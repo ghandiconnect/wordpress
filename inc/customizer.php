@@ -1,0 +1,2836 @@
+<?php
+if (!defined('ABSPATH')) {
+	exit; // Exit if accessed directly
+}
+
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/class-mwt-block-heading-control.php';
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/class-mwt-dropdown-category-control.php';
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/class-mwt-google-font-control.php';
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/class-mwt-hidden-customize-control.php';
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/class-mwt-customizer.php';
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/customizer-helpers.php';
+require_once IQCONNETIK_THEME_PATH . '/inc/customizer/customizer-woocommerce.php';
+
+
+//cutsomizer theme settings
+if (!function_exists('iqconnetik_customizer_settings_array')) :
+	function iqconnetik_customizer_settings_array()
+	{
+		return apply_filters(
+			'iqconnetik_customizer_options',
+			//panels -> sections -> settings
+			array(
+				//////////////////////
+				//registering panels//
+				//////////////////////
+				'panel_theme'                           => array(
+					'type'            => 'panel',
+					'label'           => esc_html__('Theme options', 'iqconnetik'),
+					'description'     => esc_html__('Theme specific options', 'iqconnetik'),
+					'priority'        => 130,
+					'active_callback' => '',
+				),
+				////////////////////////
+				//registering sections//
+				////////////////////////
+
+				/*
+				make sure that you have appropriate panel registered above
+				otherwise do not pass 'panel' key
+				*/
+
+				//global settings preset. It will change multiple options over 'Theme options' panel
+				'section_layout'                        => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Theme Layout', 'iqconnetik'),
+					'description' => esc_html__('Site layout options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_meta'                          => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Theme Meta', 'iqconnetik'),
+					'description' => esc_html__('Email, phone, address etc. Appears in various template parts depending from choosen sections layout', 'iqconnetik'),
+					'priority'    => 100,
+				),
+
+				//template parts layout sections
+				'section_header'                        => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Header Section', 'iqconnetik'),
+					'description' => esc_html__('Choose header options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_title'                         => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Title Section', 'iqconnetik'),
+					'description' => esc_html__('Choose title options. Yoast SEO plugin required for breadcrumbs', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_main'                          => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Main Section', 'iqconnetik'),
+					'description' => esc_html__('Choose main section options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_404'                          => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('404 Section', 'iqconnetik'),
+					'description' => esc_html__('Choose 404 section options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_footer_top'                    => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Top Footer Section', 'iqconnetik'),
+					'description' => esc_html__('Choose top footer section options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_footer'                        => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Footer Section', 'iqconnetik'),
+					'description' => esc_html__('Choose footer options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_copyright'                     => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Copyright Section', 'iqconnetik'),
+					'description' => esc_html__('Choose copyright options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_blog'                          => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Blog', 'iqconnetik'),
+					'description' => esc_html__('Blog display options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_blog_post'                     => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Single Post', 'iqconnetik'),
+					'description' => esc_html__('Single post display options', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_fonts'                         => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Fonts', 'iqconnetik'),
+					'description' => esc_html__('Choose Google fonts', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_special_categories'            => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Services, Portfolio, Team', 'iqconnetik'),
+					'description' => esc_html__('Choose separate categories for displaying Services, Portfolio, Team. They will be removed from regular blog displaying', 'iqconnetik'),
+					'priority'    => 100,
+				),
+				'section_animation'                     => array(
+					'type'        => 'section',
+					'panel'       => 'panel_theme',
+					'label'       => esc_html__('Animation', 'iqconnetik'),
+					'description' => esc_html__('You can select elements that you want to animate on your page', 'iqconnetik'),
+					'priority'    => 100,
+				),
+
+				///////////////////////
+				//registering options//
+				///////////////////////
+				/*
+				make sure that you have registered appropriate section above
+				or used default sections as 'section' key's value:
+					'title_tagline' - Site Title & Tagline
+					'colors' - Colors
+					'header_image' - Header Image
+					'background_image' - Background Image
+					'nav' - Navigation
+					'static_front_page' - Static Front Page
+				*/
+				/*
+				available types:
+					'checkbox'
+					'color'
+					'dropdown-pages'
+					'file'
+					'image'
+					'radio'
+					'select'
+					'text'
+					'textarea'
+					'url'
+					'dropdown-category' - our custom dropdown
+					'block-heading' - our custom block heading
+					'hidden-option' - our custom hidden option
+				make sure that you have provide an array with 'choices' key for 'select' and 'radio':
+					'choices' => array(
+						'choice_1' => esc_html__( 'Choice 1', 'iqconnetik' ),
+						...
+					)
+				*/
+
+				//////////////////////
+				//Hidden Demo Number//
+				//////////////////////
+				'demo_number'                           => array(
+					'type'    => 'hidden-option',
+					'section' => 'section_presets',
+					'default' => iqconnetik_option('demo_number', ''),
+				),
+
+				//////////
+				//colors//
+				//////////
+				//see _variables.scss
+				//see options.php for defaults
+				// colorLight
+				// colorFont
+				// colorFontDark
+				// colorBackground
+				// colorBorder
+				// colorBorderDark
+				// colorDark
+				// colorDarkGrey
+				// colorGrey
+				// colorMain
+				// colorMain2
+				// colorMain3
+				// colorMain4
+				'colorLight'                            => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Light color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorLight', '#ffffff'),
+					'description' => esc_html__('Using as a background for light sections and as a font color in inversed sections.', 'iqconnetik'),
+				),
+				'colorFont'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Font color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorFont', '#777777'),
+					'description' => esc_html__('Using as a font color.', 'iqconnetik'),
+				),
+				'colorFontDark'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Dark Font color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorFontDark', '#9d9d9d'),
+					'description' => esc_html__('Using as a font color.', 'iqconnetik'),
+				),
+				'colorBackground'                       => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Background color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorBackground', '#f5f5f5'),
+					'description' => esc_html__('Background color for elements in light section.', 'iqconnetik'),
+				),
+				'colorBorder'                           => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Border color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorBorder', '#e1e1e1'),
+					'description' => esc_html__('Using as a border color.', 'iqconnetik'),
+				),
+				'colorBorderDark'                           => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Dark Border color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorBorderDark', '#454545'),
+					'description' => esc_html__('Using as a dark border color.', 'iqconnetik'),
+				),
+				'colorDark'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Dark color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorDark', '#252525'),
+					'description' => esc_html__('Using as a background for inversed muted sections.', 'iqconnetik'),
+				),
+				'colorDarkGrey'                        => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Dark Grey color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorDarkGrey', '#1d1d1d'),
+					'description' => esc_html__('Using as headings color and a background for inversed sections.', 'iqconnetik'),
+				),
+				'colorGrey'                        => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Grey color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorGrey', '#f8f8f8'),
+					'description' => esc_html__('Using as a background for light muted sections.', 'iqconnetik'),
+				),
+				'colorMain'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Accent color', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorMain', '#ff6162'),
+					'description' => esc_html__('Using as a main accent color.', 'iqconnetik'),
+				),
+				'colorMain2'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Accent color 2', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorMain2', '#7470fc'),
+					'description' => esc_html__('Using as a accent color.', 'iqconnetik'),
+				),
+				'colorMain3'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Accent color 3', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorMain3', '#896efd'),
+					'description' => esc_html__('Using as a accent color.', 'iqconnetik'),
+				),
+				'colorMain4'                             => array(
+					'type'        => 'color',
+					'section'     => 'colors',
+					'label'       => esc_html__('Accent color 4', 'iqconnetik'),
+					'default'     => iqconnetik_option('colorMain4', '#4f74fb'),
+					'description' => esc_html__('Using as a accent color.', 'iqconnetik'),
+				),
+				'color_meta_icons'                      => array(
+					'type'    => 'select',
+					'section' => 'colors',
+					'label'   => esc_html__('Color for icons in post meta', 'iqconnetik'),
+					'default' => iqconnetik_option('color_meta_icons', ''),
+					'choices' => array(
+						''                      => esc_html__('Default', 'iqconnetik'),
+						'meta-icons-main'       => esc_html__('Accent color', 'iqconnetik'),
+						'meta-icons-main2'       => esc_html__('Accent 2 color', 'iqconnetik'),
+						'meta-icons-border'     => esc_html__('Borders color', 'iqconnetik'),
+						'meta-icons-light'       => esc_html__('Light color', 'iqconnetik'),
+						'meta-icons-dark'       => esc_html__('Dark color', 'iqconnetik'),
+						'meta-icons-dark-muted' => esc_html__('Darker color', 'iqconnetik'),
+					),
+				),
+
+				//////////////////////////
+				//homepage intro section//
+				//////////////////////////
+
+				// static_front_page
+				'intro_block_heading'                   => array(
+					'type'        => 'block-heading',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Intro Section', 'iqconnetik'),
+					'description' => esc_html__('Set your settings for homepage intro section. Leave blank if not needed.', 'iqconnetik'),
+				),
+				'intro_position'                        => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Position', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_position', ''),
+					'choices' => array(
+						''       => esc_html__('Hidden', 'iqconnetik'),
+						'before' => esc_html__('Before header', 'iqconnetik'),
+						'after'  => esc_html__('After header', 'iqconnetik'),
+					),
+				),
+				'intro_layout'                          => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_layout', ''),
+					'choices' => array(
+						''             => esc_html__('Background image', 'iqconnetik'),
+						'image-left'   => esc_html__('Left side image', 'iqconnetik'),
+						'image-right'  => esc_html__('Right side image', 'iqconnetik'),
+						'image-top'    => esc_html__('Top image', 'iqconnetik'),
+						'image-bottom' => esc_html__('Bottom image', 'iqconnetik'),
+					),
+				),
+				'intro_fullscreen'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Full Screen Intro Height', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_fullscreen', false),
+				),
+				'intro_background'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Background', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'intro_background_image'                => array(
+					'type'    => 'image',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_background_image', ''),
+				),
+				'intro_background_image_cover'          => array(
+					'type'    => 'checkbox',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_background_image_cover', false),
+				),
+				'intro_background_image_fixed'          => array(
+					'type'    => 'checkbox',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_background_image_fixed', false),
+				),
+				'intro_background_image_overlay'        => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+				'intro_image'                => array(
+					'type'    => 'image',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Image', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_image', ''),
+				),
+				'intro_background_image_scale' => array(
+					'type'        => 'checkbox',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Make image bigger on large screen', 'iqconnetik'),
+					'description' => esc_html__('Scale image for large screens', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_background_image_scale', false),
+				),
+				'intro_image_absolute' => array(
+					'type'        => 'checkbox',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Make image position absolute on large screen', 'iqconnetik'),
+					'description' => esc_html__('Scale image for large screens (only for left/right side image layout)', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_image_absolute', false),
+				),
+				'intro_image_animation'                 => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for intro image', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_image_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_pre_heading'                         => array(
+					'type'    => 'text',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Pre Heading text', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_pre_heading', ''),
+				),
+				'intro_pre_heading_mt'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Pre Heading top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_pre_heading_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'intro_pre_heading_mb'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Pre Heading bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_pre_heading_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'intro_pre_heading_animation'               => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for pre intro heading', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_pre_heading_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_heading'                         => array(
+					'type'    => 'text',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Heading text', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_heading', ''),
+				),
+				'intro_heading_mt'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Heading top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_heading_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'intro_heading_mb'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Heading bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_heading_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'intro_heading_animation'               => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for intro heading', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_heading_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_description'                     => array(
+					'type'    => 'textarea',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section description text', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_description', ''),
+				),
+				'intro_description_mt'                  => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Description top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_description_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'intro_description_mb'                  => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Description bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_description_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'intro_description_animation'           => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for intro description text', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_description_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_button_text_first'               => array(
+					'type'    => 'text',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Primary Action Button Text', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_button_text_first', ''),
+				),
+				'intro_button_url_first'                => array(
+					'type'    => 'url',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Primary Action Button URL', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_button_url_first', ''),
+				),
+				'intro_button_first_animation'          => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for first intro button', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_button_first_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_button_text_second'              => array(
+					'type'    => 'text',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Secondary Action Button Text', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_button_text_second', ''),
+				),
+				'intro_button_url_second'               => array(
+					'type'    => 'url',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Secondary Action Button URL', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_button_url_second', ''),
+				),
+				'intro_button_second_animation'         => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for second intro button', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_button_second_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_buttons_mt'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Buttons top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_buttons_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'intro_buttons_mb'                      => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Buttons bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_buttons_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'intro_shortcode'                       => array(
+					'type'        => 'text',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Intro Section Shortcode', 'iqconnetik'),
+					'description' => esc_html__('You can put shortcode here. It will appear below Intro description', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_shortcode', ''),
+				),
+				'intro_shortcode_mt'                    => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Shortcode top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_shortcode_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'intro_shortcode_mb'                    => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Shortcode bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_shortcode_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'intro_shortcode_animation'             => array(
+					'type'        => 'select',
+					'section'     => 'static_front_page',
+					'label'       => esc_html__('Animation for intro shortcode', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('intro_shortcode_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'intro_alignment'                       => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro Section Text Alignment', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_alignment', 'text-left'),
+					'choices' => array(
+						'text-left'   => esc_html__('Left', 'iqconnetik'),
+						'text-center' => esc_html__('Centered', 'iqconnetik'),
+						'text-right'  => esc_html__('Right', 'iqconnetik'),
+					),
+				),
+				'intro_extra_padding_top'               => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro section top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'intro_extra_padding_bottom'            => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro section bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'intro_social_links'                    => array(
+					'type'    => 'checkbox',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Show social links if they set', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_social_links', false),
+				),
+				'intro_font_size'                       => array(
+					'type'    => 'select',
+					'section' => 'static_front_page',
+					'label'   => esc_html__('Intro section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('intro_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+
+				////////
+				//logo//
+				////////
+
+				//to existing 'title_tagline' section
+				'logo_image_inverse'                => array(
+					'type'    => 'image',
+					'section' => 'title_tagline',
+					'label'   => esc_html__('Logo Inverse', 'iqconnetik'),
+					'default' => iqconnetik_option('logo_image_inverse', ''),
+				),
+				'logo'                                  => array(
+					'type'    => 'select',
+					'section' => 'title_tagline',
+					'label'   => esc_html__('Logo Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('logo', ''),
+					'choices' => array(
+						'1' => esc_html__('Left image and right text', 'iqconnetik'),
+						'2' => esc_html__('Top image and bottom text', 'iqconnetik'),
+						'3' => esc_html__('Image between text', 'iqconnetik'),
+					),
+				),
+				'logo_primary_text'                     => array(
+					'type'    => 'text',
+					'section' => 'title_tagline',
+					'label'   => esc_html__('Logo Primary Text', 'iqconnetik'),
+					'default' => iqconnetik_option('logo_primary_text', ''),
+				),
+				'logo_text_secondary'                   => array(
+					'type'    => 'text',
+					'section' => 'title_tagline',
+					'label'   => esc_html__('Logo Secondary Text', 'iqconnetik'),
+					'default' => iqconnetik_option('logo_text_secondary', ''),
+				),
+				'header_top_tall'                       => array(
+					'type'        => 'checkbox',
+					'section'     => 'title_tagline',
+					'label'       => esc_html__('Logo additional vertical padding', 'iqconnetik'),
+					'description' => esc_html__('Will make header taller in top position', 'iqconnetik'),
+					'default'     => iqconnetik_option('header_top_tall', false),
+				),
+				'logo_background'                       => array(
+					'type'    => 'select',
+					'section' => 'title_tagline',
+					'label'   => esc_html__('Logo Background', 'iqconnetik'),
+					'default' => iqconnetik_option('logo_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'logo_padding_horizontal'               => array(
+					'type'        => 'checkbox',
+					'section'     => 'title_tagline',
+					'label'       => esc_html__('Logo additional horizontal padding', 'iqconnetik'),
+					'description' => esc_html__('This will add an extra horizontal padding for logo', 'iqconnetik'),
+					'default'     => iqconnetik_option('logo_padding_horizontal', false),
+				),
+
+				//////////
+				//layout//
+				//////////
+				'preset'                                => array(
+					'type'    => 'select',
+					'section' => 'section_presets',
+					'label'   => esc_html__('Select global preset of Theme options', 'iqconnetik'),
+					'default' => iqconnetik_option('preset', ''),
+					'choices' => array(
+						''  => esc_html__('No preset', 'iqconnetik'),
+						'1' => esc_html__('First preset', 'iqconnetik'),
+						'2' => esc_html__('Second preset', 'iqconnetik'),
+					),
+				),
+				'main_container_width'                  => array(
+					'type'    => 'radio',
+					'section' => 'section_layout',
+					'label'   => esc_html__('Global container max width', 'iqconnetik'),
+					'default' => iqconnetik_option('main_container_width', '1170'),
+					'choices' => array(
+						'1520' => esc_html__('1520px', 'iqconnetik'),
+						'1170' => esc_html__('1170px', 'iqconnetik'),
+						'960'  => esc_html__('960px', 'iqconnetik'),
+						'720'  => esc_html__('720px', 'iqconnetik'),
+					),
+				),
+				'blog_container_width'                  => array(
+					'type'    => 'radio',
+					'section' => 'section_layout',
+					'label'   => esc_html__('Archive container max width', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_container_width', ''),
+					'choices' => array(
+						''     => esc_html__('Inherit from Global', 'iqconnetik'),
+						'1520' => esc_html__('1520px', 'iqconnetik'),
+						'1170' => esc_html__('1170px', 'iqconnetik'),
+						'960'  => esc_html__('960px', 'iqconnetik'),
+						'720'  => esc_html__('720px', 'iqconnetik'),
+					),
+				),
+				'blog_single_container_width'           => array(
+					'type'    => 'radio',
+					'section' => 'section_layout',
+					'label'   => esc_html__('Single post container max width', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_container_width', ''),
+					'choices' => array(
+						''     => esc_html__('Inherit from Global', 'iqconnetik'),
+						'1520' => esc_html__('1520px', 'iqconnetik'),
+						'1170' => esc_html__('1170px', 'iqconnetik'),
+						'960'  => esc_html__('960px', 'iqconnetik'),
+						'720'  => esc_html__('720px', 'iqconnetik'),
+					),
+				),
+				'boxed'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_layout',
+					'label'   => esc_html__('Boxed', 'iqconnetik'),
+					'default' => iqconnetik_option('boxed', false),
+				),
+				'preloader'                             => array(
+					'type'     => 'select',
+					'section'  => 'section_layout',
+					'label'    => esc_html__('Page preloader', 'iqconnetik'),
+					'default'  => iqconnetik_option('preloader', ''),
+					'priority' => 200,
+					'choices'  => array(
+						''       => esc_html__('No preloader', 'iqconnetik'),
+						'cover'  => esc_html__('Cover page preloader', 'iqconnetik'),
+						'corner' => esc_html__('Corner page preloader', 'iqconnetik'),
+					),
+				),
+				'box_fade_in'                           => array(
+					'type'     => 'checkbox',
+					'section'  => 'section_layout',
+					'label'    => esc_html__('Fade in page on load', 'iqconnetik'),
+					'default'  => iqconnetik_option('box_fade_in', ''),
+					'priority' => 200,
+				),
+				'totop'                                 => array(
+					'type'     => 'checkbox',
+					'section'  => 'section_layout',
+					'label'    => esc_html__('Enable page \'to top\' button', 'iqconnetik'),
+					'default'  => iqconnetik_option('totop', ''),
+					'priority' => 200,
+				),
+				'assets_min'                            => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_layout',
+					'label'       => esc_html__('Use minified version of CSS files', 'iqconnetik'),
+					'description' => esc_html__('You can use compressed versions of your static files for best performance', 'iqconnetik'),
+					'default'     => iqconnetik_option('assets_min', ''),
+					'priority'    => 200,
+				),
+				'jquery_to_footer'                      => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_layout',
+					'label'       => esc_html__('Put jQuery script to footer for guest users', 'iqconnetik'),
+					'description' => esc_html__('If some plugins requires jQuery, it will be loaded in the footer section', 'iqconnetik'),
+					'default'     => iqconnetik_option('jquery_to_footer', ''),
+					'priority'    => 200,
+				),
+
+				////////
+				//meta//
+				////////
+				'meta_email'                            => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Email', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_email', ''),
+				),
+				'meta_email_label'                      => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Email label', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_email_label', ''),
+				),
+				'meta_email_2'                            => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Email 2', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_email_2', ''),
+				),
+				'meta_email_2_label'                      => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Email 2 label', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_email_2_label', ''),
+				),
+				'meta_phone'                            => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Phone', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_phone', ''),
+				),
+				'meta_phone_label'                      => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Phone label', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_phone_label', ''),
+				),
+				'meta_phone_2'                            => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Phone 2', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_phone_2', ''),
+				),
+				'meta_phone_2_label'                      => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Phone 2 label', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_phone_2_label', ''),
+				),
+				'meta_address'                          => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Address', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_address', ''),
+				),
+				'meta_address_label'                    => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Address label', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_address_label', ''),
+				),
+				'meta_opening_hours'                    => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Opening hours', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_opening_hours', ''),
+				),
+				'meta_opening_hours_label'              => array(
+					'type'    => 'text',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Opening hours label', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_opening_hours_label', ''),
+				),
+				//social links
+				'meta_telegram'                        => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Telegram URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_telegram', ''),
+				),
+				'meta_facebook'                         => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Facebook URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_facebook', ''),
+				),
+				'meta_instagram'                        => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Instagram URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_instagram', ''),
+				),
+				'meta_youtube'                          => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('YouTube URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_youtube', ''),
+				),
+				'meta_twitter'                          => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Twitter URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_twitter', ''),
+				),
+				'meta_pinterest'                        => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('Pinterest URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_pinterest', ''),
+				),
+				'meta_linkedin'                         => array(
+					'type'    => 'url',
+					'section' => 'section_meta',
+					'label'   => esc_html__('LinkedIn URL', 'iqconnetik'),
+					'default' => iqconnetik_option('meta_linkedin', ''),
+				),
+
+				//////////
+				//header//
+				//////////
+
+				//header image options
+				//section 'header_image'
+				'header_image_background_image_cover'   => array(
+					'type'    => 'checkbox',
+					'section' => 'header_image',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_image_background_image_cover', false),
+				),
+				'header_image_background_image_fixed'   => array(
+					'type'    => 'checkbox',
+					'section' => 'header_image',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_image_background_image_fixed', false),
+				),
+				'header_image_background_image_overlay' => array(
+					'type'    => 'select',
+					'section' => 'header_image',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_image_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+
+				//header
+				'header'                                => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Header Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('header', '1'),
+					'choices' => array(
+						''  => esc_html__('Disabled', 'iqconnetik'),
+						'1' => esc_html__('Logo, menu and button', 'iqconnetik'),
+						'2' => esc_html__('Toplogo section and bottom menu, button', 'iqconnetik'),
+						'3' => esc_html__('Left logo and menu', 'iqconnetik'),
+						'4' => esc_html__('Header Side Left', 'iqconnetik'),
+						'5' => esc_html__('Header Side Right', 'iqconnetik'),
+						'6' => esc_html__('Header Side Left Sticked', 'iqconnetik'),
+						'7' => esc_html__('Header Side Right Sticked', 'iqconnetik'),
+					),
+				),
+				'header_fluid'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Full Width Header', 'iqconnetik'),
+					'default' => iqconnetik_option('header_fluid', true),
+				),
+				'header_background'                     => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Header Background', 'iqconnetik'),
+					'default' => iqconnetik_option('header_background', 'l'),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'header_background_image'               => array(
+					'type'    => 'image',
+					'section' => 'section_header',
+					'label'   => esc_html__('Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_background_image', ''),
+				),
+				'header_background_image_cover'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_background_image_cover', false),
+				),
+				'header_background_image_fixed'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_background_image_fixed', false),
+				),
+				'header_background_image_overlay'       => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+				'header_search'                         => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Show Search', 'iqconnetik'),
+					'default' => iqconnetik_option('header_search', ''),
+					'description' => esc_html__('If header layout contains it', 'iqconnetik'),
+					'choices' => array(
+						''       => esc_html__('Disabled', 'iqconnetik'),
+						'on'   => esc_html__('Enable', 'iqconnetik'),
+					),
+				),
+				'header_align_main_menu'                => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Align main menu', 'iqconnetik'),
+					'default' => iqconnetik_option('header_align_main_menu', true),
+					'choices' => array(
+						''            => esc_html__('Default', 'iqconnetik'),
+						'menu-right'  => esc_html__('Right', 'iqconnetik'),
+						'menu-center' => esc_html__('Center', 'iqconnetik'),
+					),
+				),
+				// TODO why commented out?
+				'header_toggler_menu_main'              => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Put main menu mobile toggler in header', 'iqconnetik'),
+					'default' => iqconnetik_option('header_toggler_menu_main', true),
+				),
+				'header_absolute_home_page'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Position absolute header (Home Page)', 'iqconnetik'),
+					'default' => iqconnetik_option('header_absolute_home_page', false),
+				),
+				'header_absolute'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Position absolute header', 'iqconnetik'),
+					'default' => iqconnetik_option('header_absolute', false),
+				),
+				'header_transparent'                    => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_header',
+					'label'       => esc_html__('Remove background color', 'iqconnetik'),
+					'description' => esc_html__('Make header transparent', 'iqconnetik'),
+					'default'     => iqconnetik_option('header_transparent', false),
+				),
+				'header_border_top'                     => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Top border', 'iqconnetik'),
+					'default' => iqconnetik_option('header_border_top', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'header_border_bottom'                  => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Bottom border', 'iqconnetik'),
+					'default' => iqconnetik_option('header_border_bottom', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'header_sticky'                         => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Sticky Header', 'iqconnetik'),
+					'default' => iqconnetik_option('header_sticky', false),
+					'choices' => array(
+						''                 => esc_html__('Disabled', 'iqconnetik'),
+						'always-sticky'    => esc_html__('Always visible', 'iqconnetik'),
+						'scrolltop-sticky' => esc_html__('Visible on scrolling to top', 'iqconnetik'),
+					),
+				),
+				'header_font_size'                      => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Header section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('header_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'header_button_text'               => array(
+					'type'    => 'text',
+					'section' => 'section_header',
+					'description' => esc_html__('If header layout contains it', 'iqconnetik'),
+					'label'   => esc_html__('Button Text', 'iqconnetik'),
+					'default' => iqconnetik_option('header_button_text', ''),
+				),
+				'header_button_image'                => array(
+					'type'    => 'image',
+					'section' => 'section_header',
+					'label'   => esc_html__('Add Button Image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_button_image', ''),
+				),
+				'header_button_url'                => array(
+					'type'    => 'url',
+					'section' => 'section_header',
+					'label'   => esc_html__('Button URL', 'iqconnetik'),
+					'default' => iqconnetik_option('header_button_url', ''),
+				),
+				//toplogo in header
+				'header_toplogo_options_heading'        => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_header',
+					'label'       => esc_html__('Header toplogo options', 'iqconnetik'),
+					'description' => esc_html__('You need to fill theme meta options to show them in header toplogo.', 'iqconnetik'),
+				),
+				'toplogo'                               => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Toplogo Layout', 'iqconnetik'),
+					'description' => esc_html__('If header layout contains it', 'iqconnetik'),
+					'default' => iqconnetik_option('toplogo', ''),
+					'choices' => array(
+						''  => esc_html__('Disabled', 'iqconnetik'),
+						'1' => esc_html__('Logo, meta and social links', 'iqconnetik'),
+						'2' => esc_html__('Left meta, centered logo and right search', 'iqconnetik'),
+					),
+				),
+				'toplogo_background'                    => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Header Toplogo Background', 'iqconnetik'),
+					'default' => iqconnetik_option('toplogo_background', 'l'),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'toplogo_font_size'                     => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Toplogo section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('toplogo_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				//topline in header
+				'header_topline_options_heading'        => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_header',
+					'label'       => esc_html__('Header topline options', 'iqconnetik'),
+					'description' => esc_html__('You need to fill theme meta options to show them in header topline.', 'iqconnetik'),
+				),
+				'topline'                               => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Topline Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('topline', ''),
+					'choices' => array(
+						''  => esc_html__('Disabled', 'iqconnetik'),
+						'1' => esc_html__('Left text, meta and right social icons', 'iqconnetik'),
+						'2' => esc_html__('Left social icons and right search', 'iqconnetik'),
+					),
+				),
+				'topline_fluid'                         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Full Width Header Topline', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_fluid', true),
+				),
+				'topline_background'                    => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Header Topline Background', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_background', 'l'),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'topline_font_size'                     => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Topline section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'topline_border_top'                     => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Top border', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_border_top', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'topline_border_bottom'                  => array(
+					'type'    => 'select',
+					'section' => 'section_header',
+					'label'   => esc_html__('Bottom border', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_border_bottom', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'topline_text'               => array(
+					'type'    => 'text',
+					'section' => 'section_header',
+					'label'   => esc_html__('Text', 'iqconnetik'),
+					'description' => esc_html__('If topline layout contains it', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_text', ''),
+				),
+				'topline_meta_opening_hours'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Show Meta Opening Hours', 'iqconnetik'),
+					'description' => esc_html__('If topline layout contains it', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_meta_opening_hours', false),
+				),
+				'topline_meta_mail'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Show Meta Mail', 'iqconnetik'),
+					'description' => esc_html__('If topline layout contains it', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_meta_mail', false),
+				),
+				'topline_meta_phone'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Show Meta Phone', 'iqconnetik'),
+					'description' => esc_html__('If topline layout contains it', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_meta_phone', false),
+				),
+				'topline_meta_address'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_header',
+					'label'   => esc_html__('Show Meta Address', 'iqconnetik'),
+					'description' => esc_html__('If topline layout contains it', 'iqconnetik'),
+					'default' => iqconnetik_option('topline_meta_address', false),
+				),
+				'header_logo_background'                      => array(
+					'type'    => 'image',
+					'section' => 'section_header',
+					'label'   => esc_html__('Logo modal Background image', 'iqconnetik'),
+					'default' => iqconnetik_option('header_logo_background', ''),
+				),
+
+				'header_logo_modal_text' => array(
+					'type'  => 'text',
+					'section' => 'section_header',
+					'label' => esc_html__('Text for Login modal', 'iqconnetik'),
+					'default' => iqconnetik_option('header_logo_modal_text', ''),
+				),
+
+				/////////
+				//title//
+				/////////
+				'title'                                 => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Title Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('title', '1'),
+					'choices' => array(
+						'1' => esc_html__('Left title with bottom breadcrumbs', 'iqconnetik'),
+						'2' => esc_html__('Title above breadcrumbs centered', 'iqconnetik'),
+						'3' => esc_html__('Left title with right breadcrumbs', 'iqconnetik'),
+						'4' => esc_html__('Left title with inline breadcrumbs', 'iqconnetik'),
+						'5' => esc_html__('Centered title with bottom right breadcrumbs', 'iqconnetik'),
+						'6' => esc_html__('Centered small title with bottom small breadcrumbs', 'iqconnetik'),
+						'7' => esc_html__('Left small title with bottom small breadcrumbs', 'iqconnetik'),
+					),
+				),
+				'title_fluid'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_title',
+					'label'   => esc_html__('Full Width Title', 'iqconnetik'),
+					'default' => iqconnetik_option('title_fluid', true),
+				),
+				'title_show_title'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_title',
+					'label'   => esc_html__('Show title in title section instead of content area', 'iqconnetik'),
+					'default' => iqconnetik_option('title_show_title', ''),
+				),
+				'title_show_breadcrumbs'                => array(
+					'type'    => 'checkbox',
+					'section' => 'section_title',
+					'label'   => esc_html__('Show breadcrumbs (Yoast SEO or Rank Math plugins required)', 'iqconnetik'),
+					'default' => iqconnetik_option('title_show_breadcrumbs', true),
+				),
+				'title_background'                      => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Title Background', 'iqconnetik'),
+					'default' => iqconnetik_option('title_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'title_border_top'                      => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Top border', 'iqconnetik'),
+					'default' => iqconnetik_option('title_border_top', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'title_border_bottom'                   => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Bottom border', 'iqconnetik'),
+					'default' => iqconnetik_option('title_border_bottom', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'title_extra_padding_top'               => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('title_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'title_extra_padding_bottom'            => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('title_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'title_font_size'                       => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Title section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('title_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'title_hide_taxonomy_name'              => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_title',
+					'label'       => esc_html__('Hide taxonomy name', 'iqconnetik'),
+					'description' => esc_html__('You can hide a taxonomy name on taxonomy archives page', 'iqconnetik'),
+					'default'     => iqconnetik_option('title_hide_taxonomy_name', false),
+				),
+				'title_background_image'                => array(
+					'type'    => 'image',
+					'section' => 'section_title',
+					'label'   => esc_html__('Title Section Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('title_background_image', ''),
+				),
+				'title_background_image_cover'          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_title',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('title_background_image_cover', false),
+				),
+				'title_background_image_fixed'          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_title',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('title_background_image_fixed', false),
+				),
+				'title_background_image_overlay'        => array(
+					'type'    => 'select',
+					'section' => 'section_title',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('title_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+
+				////////////////
+				//main section//
+				////////////////
+				'main_sidebar_width'                    => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Sidebar width on big screens', 'iqconnetik'),
+					'default' => iqconnetik_option('main_sidebar_width', ''),
+					'choices' => array(
+						'33' => esc_html__('Default - 1/3 - 33%', 'iqconnetik'),
+						'25' => esc_html__('1/4 - 25%', 'iqconnetik'),
+						'30' => esc_html__('30% - 70%', 'iqconnetik'),
+					),
+				),
+				'main_gap_width'                        => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Sidebar gap width', 'iqconnetik'),
+					'default' => iqconnetik_option('main_gap_width', ''),
+					'choices' => array(
+						''  => esc_html__('Default', 'iqconnetik'),
+						'10' => esc_html__('10px', 'iqconnetik'),
+						'20' => esc_html__('20px', 'iqconnetik'),
+						'30' => esc_html__('30px', 'iqconnetik'),
+						'40' => esc_html__('40px', 'iqconnetik'),
+						'50' => esc_html__('50px', 'iqconnetik'),
+						'60' => esc_html__('60px', 'iqconnetik'),
+						'80' => esc_html__('80px', 'iqconnetik'),
+						'100' => esc_html__('100px', 'iqconnetik'),
+					),
+				),
+				'main_sidebar_sticky'                   => array(
+					'type'    => 'checkbox',
+					'section' => 'section_main',
+					'label'   => esc_html__('Sticky sidebar', 'iqconnetik'),
+					'default' => iqconnetik_option('main_sidebar_sticky', false),
+				),
+				'main_extra_padding_top'                => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('main_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'main_extra_padding_bottom'             => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('main_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'main_font_size'                        => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Main section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('main_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'sidebar_font_size'                     => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Sidebar font size', 'iqconnetik'),
+					'default' => iqconnetik_option('sidebar_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'main_version'             => array(
+					'type'    => 'select',
+					'section' => 'section_main',
+					'label'   => esc_html__('Theme Version', 'iqconnetik'),
+					'description' => esc_html__('Light or dark version (not working for Elementor pages)', 'iqconnetik'),
+					'default' => iqconnetik_option('main_version', ''),
+					'choices' => array(
+						'l' => esc_html__('Light', 'iqconnetik'),
+						'i'  => esc_html__('Dark', 'iqconnetik'),
+					),
+				),
+				///////
+				//404//
+				///////
+				'404_heading_image'                => array(
+					'type'    => 'image',
+					'section' => 'section_404',
+					'label'   => esc_html__('404 Image', 'iqconnetik'),
+					'default' => iqconnetik_option('404_heading_image', ''),
+				),
+				'404_heading'                         => array(
+					'type'    => 'text',
+					'section' => 'section_404',
+					'label'   => esc_html__('404', 'iqconnetik'),
+					'default' => iqconnetik_option('404_heading', ''),
+				),
+				'404_text_bottom_line'                         => array(
+					'type'    => 'text',
+					'section' => 'section_404',
+					'label'   => esc_html__('404 Text', 'iqconnetik'),
+					'default' => iqconnetik_option('404_text_bottom_line', ''),
+				),
+				'404_background'                      => array(
+					'type'    => 'select',
+					'section' => 'section_404',
+					'label'   => esc_html__('404 Page Background', 'iqconnetik'),
+					'default' => iqconnetik_option('404_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'404_background_image'                => array(
+					'type'    => 'image',
+					'section' => 'section_404',
+					'label'   => esc_html__('404 Page Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('404_background_image', ''),
+				),
+				'404_background_image_overlay'        => array(
+					'type'    => 'select',
+					'section' => 'section_404',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('404_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+				'404_extra_padding_top'                => array(
+					'type'    => 'select',
+					'section' => 'section_404',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('404_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+						'pt-11' => esc_html__('11em', 'iqconnetik'),
+					),
+				),
+				'404_extra_padding_bottom'             => array(
+					'type'    => 'select',
+					'section' => 'section_404',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('404_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+						'pb-11' => esc_html__('11em', 'iqconnetik'),
+					),
+				),
+				'404_content_align'                => array(
+					'type'    => 'select',
+					'section' => 'section_404',
+					'label'   => esc_html__('Content position', 'iqconnetik'),
+					'default' => iqconnetik_option('404_content_align', true),
+					'choices' => array(
+						''            => esc_html__('Default', 'iqconnetik'),
+						'content-right'  => esc_html__('Right', 'iqconnetik'),
+						'content-center' => esc_html__('Center', 'iqconnetik'),
+					),
+				),
+				//////////////
+				//footer_top//
+				//////////////
+				'footer_top'                                => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top', ''),
+					'choices' => array(
+						''  => esc_html__('Disabled', 'iqconnetik'),
+						'1' => esc_html__('Single column', 'iqconnetik'),
+						'2' => esc_html__('Single column centered', 'iqconnetik'),
+						'3' => esc_html__('Two columns', 'iqconnetik'),
+						'4' => esc_html__('Four columns centered (widgets included)', 'iqconnetik'),
+					),
+				),
+				'footer_top_layout_gap'                     => array(
+					'type'        => 'select',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Widgets gap', 'iqconnetik'),
+					'description' => esc_html__('Used only for \'Three columns centered\' layouts', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_top_layout_gap', ''),
+					'choices'     => iqconnetik_get_feed_layout_gap_options(),
+				),
+				'footer_top_fluid'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Full Width Section', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_fluid', false),
+				),
+				'footer_top_heading'                         => array(
+					'type'    => 'text',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Heading text', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_heading', ''),
+				),
+				'footer_top_heading_mt'                      => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Heading top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_heading_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'footer_top_heading_mb'                      => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Heading bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_heading_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'footer_top_heading_animation'               => array(
+					'type'        => 'select',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Animation for footer_top heading', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_top_heading_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'footer_top_description'                     => array(
+					'type'    => 'textarea',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('description text', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_description', ''),
+				),
+				'footer_top_description_mt'                  => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Description top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_description_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'footer_top_description_mb'                  => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Description bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_description_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'footer_top_description_animation'           => array(
+					'type'        => 'select',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Animation for footer_top description text', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_top_description_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'footer_top_shortcode'                       => array(
+					'type'        => 'text',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Shortcode', 'iqconnetik'),
+					'description' => esc_html__('You can put shortcode here. It will appear below description', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_top_shortcode', ''),
+				),
+				'footer_top_shortcode_mt'                    => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Shortcode top margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_shortcode_mt', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mt-0'  => '0',
+						'mt-05' => '0.5em',
+						'mt-1'  => '1em',
+						'mt-2'  => '2em',
+						'mt-3'  => '3em',
+						'mt-4'  => '4em',
+						'mt-5'  => '5em',
+					),
+				),
+				'footer_top_shortcode_mb'                    => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Shortcode bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_shortcode_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'footer_top_shortcode_animation'             => array(
+					'type'        => 'select',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Animation for shortcode', 'iqconnetik'),
+					'description' => esc_html__('Animation should be enabled', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_top_shortcode_animation', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'footer_top_background'                     => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Background', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'footer_top_border_top'                     => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Top border', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_border_top', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'footer_top_border_bottom'                  => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Bottom border', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_border_bottom', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'footer_top_extra_padding_top'              => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'footer_top_extra_padding_bottom'           => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'footer_top_font_size'                      => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Font Size', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'footer_top_background_image'               => array(
+					'type'    => 'image',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_background_image', ''),
+				),
+				'footer_top_background_image_cover'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_background_image_cover', false),
+				),
+				'footer_top_background_image_fixed'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_background_image_fixed', false),
+				),
+				'footer_top_background_image_overlay'       => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+
+				//footer top bottom section
+				'footer_top_bottom_section_options_heading'        => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Bottom Section options', 'iqconnetik'),
+					'description' => esc_html__('You need select \'Four columns centered (widgets included)\' layout to add this section after top footer section.', 'iqconnetik'),
+				),
+				'footer_top_bottom_section'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Show Bottom Section', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section', false),
+				),
+				'footer_top_bottom_section_home_page_only'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Show only on Home page', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_home_page_only', false),
+				),
+				'footer_top_bottom_section_fluid'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Full Width Section', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_fluid', false),
+				),
+				'footer_top_bottom_section_heading'                         => array(
+					'type'    => 'text',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Heading text', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_heading', ''),
+				),
+				'footer_top_bottom_section_heading_mb'                      => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Heading bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_heading_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'footer_top_bottom_section_description'                     => array(
+					'type'    => 'textarea',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('description text', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_description', ''),
+				),
+				'footer_top_bottom_section_description_mb'                  => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Description bottom margin', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_description_mb', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'mb-0'  => '0',
+						'mb-05' => '0.5em',
+						'mb-1'  => '1em',
+						'mb-2'  => '2em',
+						'mb-3'  => '3em',
+						'mb-4'  => '4em',
+						'mb-5'  => '5em',
+					),
+				),
+				'footer_top_bottom_section_shortcode'                       => array(
+					'type'        => 'text',
+					'section'     => 'section_footer_top',
+					'label'       => esc_html__('Shortcode', 'iqconnetik'),
+					'description' => esc_html__('You can put shortcode here. It will appear below description', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_top_bottom_section_shortcode', ''),
+				),
+				'footer_top_bottom_section_background'                     => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Background', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'footer_top_bottom_section_border_top'                     => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Top border', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_border_top', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'footer_top_bottom_section_border_bottom'                  => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Bottom border', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_border_bottom', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'footer_top_bottom_section_extra_padding_top'              => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'footer_top_bottom_section_extra_padding_bottom'           => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'footer_top_bottom_section_font_size'                      => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Font Size', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'footer_top_bottom_section_background_image'               => array(
+					'type'    => 'image',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_background_image', ''),
+				),
+				'footer_top_bottom_section_background_image_cover'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_background_image_cover', false),
+				),
+				'footer_top_bottom_section_background_image_fixed'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_background_image_fixed', false),
+				),
+				'footer_top_bottom_section_background_image_overlay'       => array(
+					'type'    => 'select',
+					'section' => 'section_footer_top',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_top_bottom_section_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+
+				//////////
+				//footer//
+				//////////
+				'footer'                                => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Footer Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('footer', '1'),
+					'choices' => array(
+						''  => esc_html__('Disabled', 'iqconnetik'),
+						'1' => esc_html__('Equal columns', 'iqconnetik'),
+						'2' => esc_html__('First one half column', 'iqconnetik'),
+						'3' => esc_html__('Second one half column', 'iqconnetik'),
+						'4' => esc_html__('Full Width', 'iqconnetik'),
+						'5' => esc_html__('Full Width centered', 'iqconnetik'),
+						'6' => esc_html__('Full Width centered narrow', 'iqconnetik'),
+						'7' => esc_html__('Second and third narrow columns', 'iqconnetik'),
+						'8' => esc_html__('Centered special column', 'iqconnetik'),
+						'9' => esc_html__('Three equal columns', 'iqconnetik'),
+					),
+				),
+				'footer_layout_gap'                     => array(
+					'type'        => 'select',
+					'section'     => 'section_footer',
+					'label'       => esc_html__('Footer widgets gap', 'iqconnetik'),
+					'description' => esc_html__('Used only for multiple columns layouts', 'iqconnetik'),
+					'default'     => iqconnetik_option('footer_layout_gap', ''),
+					'choices'     => iqconnetik_get_feed_layout_gap_options(),
+				),
+				'footer_fluid'                          => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Full Width Footer', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_fluid', false),
+				),
+				'footer_background'                     => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Footer Background', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'footer_border_top'                     => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Top border', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_border_top', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'footer_border_bottom'                  => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Bottom border', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_border_bottom', ''),
+					'choices' => iqconnetik_customizer_borders_array(),
+				),
+				'footer_extra_padding_top'              => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'footer_extra_padding_bottom'           => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'footer_font_size'                      => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Footer Section Font Size', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'footer_background_image'               => array(
+					'type'    => 'image',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Footer Section Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_background_image', ''),
+				),
+				'footer_background_image_cover'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_background_image_cover', false),
+				),
+				'footer_background_image_fixed'         => array(
+					'type'    => 'checkbox',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_background_image_fixed', false),
+				),
+				'footer_background_image_overlay'       => array(
+					'type'    => 'select',
+					'section' => 'section_footer',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+
+				/////////////
+				//copyright//
+				/////////////
+				'copyright'                             => array(
+					'type'    => 'select',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Copyright Layout', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright', '1'),
+					'choices' => array(
+						''  => esc_html__('Disabled', 'iqconnetik'),
+						'1' => esc_html__('Only copyright (centered)', 'iqconnetik'),
+						'2' => esc_html__('Only copyright (left aligned)', 'iqconnetik'),
+						'3' => esc_html__('Left copyright and right menu', 'iqconnetik'),
+						'4' => esc_html__('Left copyright and right social icons', 'iqconnetik'),
+						'5' => esc_html__('Left copyright, menu and right social icons', 'iqconnetik'),
+						'6' => esc_html__('Top copyright and bottom social icons (centered)', 'iqconnetik'),
+						'7' => esc_html__('Left copyright and right social menu', 'iqconnetik'),
+					),
+				),
+				'copyright_text'                        => array(
+					'type'        => 'textarea',
+					'section'     => 'section_copyright',
+					'label'       => esc_html__('Copyright text', 'iqconnetik'),
+					'description' => esc_html__('Site name will be displayed, if leave empty', 'iqconnetik'),
+					'default'     => iqconnetik_option('copyright_text', ''),
+				),
+				'copyright_fluid'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Full Width copyright', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_fluid', true),
+				),
+				'copyright_background'                  => array(
+					'type'    => 'select',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Copyright Background', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_background', ''),
+					'choices' => iqconnetik_customizer_backgrounds_array(),
+				),
+				'copyright_extra_padding_top'           => array(
+					'type'    => 'select',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Top padding', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_extra_padding_top', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pt-0'  => esc_html__('0', 'iqconnetik'),
+						'pt-1'  => esc_html__('1em', 'iqconnetik'),
+						'pt-2'  => esc_html__('2em', 'iqconnetik'),
+						'pt-3'  => esc_html__('3em', 'iqconnetik'),
+						'pt-4'  => esc_html__('4em', 'iqconnetik'),
+						'pt-5'  => esc_html__('5em', 'iqconnetik'),
+						'pt-6'  => esc_html__('6em', 'iqconnetik'),
+						'pt-7'  => esc_html__('7em', 'iqconnetik'),
+						'pt-8'  => esc_html__('8em', 'iqconnetik'),
+						'pt-9'  => esc_html__('9em', 'iqconnetik'),
+						'pt-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'copyright_extra_padding_bottom'        => array(
+					'type'    => 'select',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Bottom padding', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_extra_padding_bottom', ''),
+					'choices' => array(
+						''      => esc_html__('Default', 'iqconnetik'),
+						'pb-0'  => esc_html__('0', 'iqconnetik'),
+						'pb-1'  => esc_html__('1em', 'iqconnetik'),
+						'pb-2'  => esc_html__('2em', 'iqconnetik'),
+						'pb-3'  => esc_html__('3em', 'iqconnetik'),
+						'pb-4'  => esc_html__('4em', 'iqconnetik'),
+						'pb-5'  => esc_html__('5em', 'iqconnetik'),
+						'pb-6'  => esc_html__('6em', 'iqconnetik'),
+						'pb-7'  => esc_html__('7em', 'iqconnetik'),
+						'pb-8'  => esc_html__('8em', 'iqconnetik'),
+						'pb-9'  => esc_html__('9em', 'iqconnetik'),
+						'pb-10' => esc_html__('10em', 'iqconnetik'),
+					),
+				),
+				'copyright_font_size'                   => array(
+					'type'    => 'select',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Copyright section font size', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_font_size', ''),
+					'choices' => iqconnetik_customizer_font_size_array(),
+				),
+				'copyright_background_image'            => array(
+					'type'    => 'image',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Copyright Section Background Image', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_background_image', ''),
+				),
+				'copyright_background_image_cover'      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Cover background image', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_background_image_cover', false),
+				),
+				'copyright_background_image_fixed'      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Fixed background image', 'iqconnetik'),
+					'default' => iqconnetik_option('copyright_background_image_fixed', false),
+				),
+				'copyright_background_image_overlay'    => array(
+					'type'    => 'select',
+					'section' => 'section_copyright',
+					'label'   => esc_html__('Overlay for background image', 'iqconnetik'),
+					'default' => iqconnetik_option('footer_background_image_overlay', ''),
+					'choices' => iqconnetik_customizer_background_overlay_array(),
+				),
+
+				/////////
+				//fonts//
+				/////////
+				'font_body_heading'                     => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_fonts',
+					'label'       => esc_html__('Body font options', 'iqconnetik'),
+					'description' => esc_html__('You can use CMD (CTRL) key for select multiple variants and subsets.', 'iqconnetik'),
+				),
+				'font_body'                             => array(
+					'type'    => 'google-font',
+					'section' => 'section_fonts',
+					'label'   => esc_html__('Body Custom Font', 'iqconnetik'),
+					'default' => iqconnetik_option('font_body', '{"font":"","variant": [],"subset":[]}'),
+				),
+				'font_headings_heading'                 => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_fonts',
+					'label'       => esc_html__('Secondary font options', 'iqconnetik'),
+					'description' => esc_html__('You can use CMD (CTRL) key for select multiple variants and subsets.', 'iqconnetik'),
+				),
+				'font_headings'                         => array(
+					'type'    => 'google-font',
+					'section' => 'section_fonts',
+					'label'   => esc_html__('Secondary Custom Font', 'iqconnetik'),
+					'default' => iqconnetik_option('font_headings', '{"font":"","variant": [],"subset":[]}'),
+				),
+
+				////////
+				//blog//
+				////////
+				'blog_layout'                           => array(
+					'type'    => 'select',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Blog feed layout', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_layout', ''),
+					'choices' => iqconnetik_get_feed_layout_options(),
+				),
+				'blog_sidebar_position'                 => array(
+					'type'        => 'radio',
+					'section'     => 'section_blog',
+					'label'       => esc_html__('Blog sidebar position', 'iqconnetik'),
+					'description' => esc_html__('Can be overriden for certain category on category edit page', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_sidebar_position', 'right'),
+					'choices'     => iqconnetik_get_sidebar_position_options(),
+				),
+				'blog_page_name'                        => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Blog page name. Default: \'Blog\'', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_page_name', esc_html__('Blog', 'iqconnetik')),
+				),
+				'blog_show_full_text'                   => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show full text instead of excerpt', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_full_text', false),
+				),
+				'blog_excerpt_length'                   => array(
+					'type'        => 'number',
+					'section'     => 'section_blog',
+					'label'       => esc_html__('Custom excerpt length', 'iqconnetik'),
+					'description' => esc_html__('Words amount', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_excerpt_length', 40),
+				),
+				'blog_read_more_text'                   => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('\'Read More\' text. Leave blank to hide', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_read_more_text', ''),
+				),
+				'blog_hide_taxonomy_type_name'          => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_blog',
+					'label'       => esc_html__('Hide taxonomy type name in title section', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_hide_taxonomy_type_name', false),
+					'description' => esc_html__('You can hide taxonomy name (ex. \'Tag:\') word if you want.', 'iqconnetik'),
+				),
+				'blog_meta_options_heading'             => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_blog',
+					'label'       => esc_html__('Post meta options', 'iqconnetik'),
+					'description' => esc_html__('Select what post meta you want to show in blog feed. Not all layouts will show post meta even if it is checked.', 'iqconnetik'),
+				),
+				'blog_hide_meta_icons'                  => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Hide icons in the post meta', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_hide_meta_icons', false),
+				),
+				'blog_show_author'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show author', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_author', true),
+				),
+				'blog_show_author_avatar'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show author avatar', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_author_avatar', false),
+				),
+				'blog_before_author_word'               => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Text before author', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_before_author_word', ''),
+				),
+				'blog_show_date'                        => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show date', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_date', true),
+				),
+				'blog_before_date_word'                 => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Text before date', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_before_date_word', ''),
+				),
+				'blog_show_categories'                  => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show categories', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_categories', true),
+				),
+				'blog_show_tags'                        => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show tags', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_tags', true),
+				),
+				'blog_before_tags_word'                 => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Text before tags', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_before_tags_word', ''),
+				),
+				'blog_show_views'               => array(
+					'type'    => 'select',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show views', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_views', true),
+					'choices' => array(
+						''       => esc_html__('None', 'iqconnetik'),
+						'text'   => esc_html__('Views number with text', 'iqconnetik'),
+						'number' => esc_html__('Only views number', 'iqconnetik'),
+					),
+				),
+				'blog_before_views_word'                 => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Text before views', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_before_views_word', ''),
+				),
+				'blog_show_likes'               => array(
+					'type'    => 'select',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show likes', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_likes', true),
+					'choices' => array(
+						''       => esc_html__('None', 'iqconnetik'),
+						'text'   => esc_html__('Likes number with text', 'iqconnetik'),
+						'number' => esc_html__('Only likes number', 'iqconnetik'),
+					),
+				),
+				'blog_before_likes_word'                 => array(
+					'type'    => 'text',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Text before likes', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_before_likes_word', ''),
+				),
+				'blog_show_comments_link'               => array(
+					'type'    => 'select',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show comments count', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_show_comments_link', true),
+					'choices' => array(
+						''       => esc_html__('None', 'iqconnetik'),
+						'text'   => esc_html__('Comments number with text', 'iqconnetik'),
+						'number' => esc_html__('Only comments number', 'iqconnetik'),
+					),
+				),
+				'blog_share_options_heading'             => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_blog',
+					'label'       => esc_html__('Share buttons', 'iqconnetik'),
+				),
+				'blog_share_facebook'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show share button facebook', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_share_facebook', true),
+				),
+				'blog_share_twitter'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show share button twitter', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_share_twitter', true),
+				),
+				'blog_share_telegram'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show share button telegram', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_share_telegram', true),
+				),
+				'blog_share_pinterest'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show share button pinterest', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_share_pinterest', true),
+				),
+				'blog_share_linkedin'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog',
+					'label'   => esc_html__('Show share button linkedin', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_share_linkedin', true),
+				),
+
+				////////
+				//post//
+				////////
+				//same as blog (except post nav and author bio)
+				'blog_single_sidebar_position'          => array(
+					'type'        => 'radio',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Blog post sidebar position', 'iqconnetik'),
+					'description' => esc_html__('Can be overriden for certain post by selecting appropriate post template', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_sidebar_position', 'right'),
+					'choices'     => iqconnetik_get_sidebar_position_options(),
+				),
+				'blog_single_show_author_bio'           => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Show Author Bio', 'iqconnetik'),
+					'description' => esc_html__('You need to fill Biographical Info to display author bio', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_show_author_bio', true),
+				),
+				'blog_single_author_bio_about_word'     => array(
+					'type'        => 'text',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('\'About author\' intro word', 'iqconnetik'),
+					'description' => esc_html__('Leave blank if not needed', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_author_bio_about_word', ''),
+				),
+				'blog_single_post_nav_heading'          => array(
+					'type'    => 'block-heading',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Posts navigation settings', 'iqconnetik'),
+				),
+				'blog_single_post_nav'                  => array(
+					'type'    => 'select',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Posts Navigation', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_post_nav', ''),
+					'choices' => array(
+						''          => esc_html__('Disabled', 'iqconnetik'),
+						'title'     => esc_html__('Only title', 'iqconnetik'),
+						'arrow'     => esc_html__('Only next/previous word', 'iqconnetik'),
+						'bg'        => esc_html__('Background featured image', 'iqconnetik'),
+					),
+				),
+				'blog_single_post_nav_word_prev'        => array(
+					'type'        => 'text',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('\'Previous post\' word', 'iqconnetik'),
+					'description' => esc_html__('Post navigation has to be chosen', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_post_nav_word_prev', esc_html__('Prev', 'iqconnetik')),
+				),
+				'blog_single_post_nav_word_next'        => array(
+					'type'        => 'text',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('\'Next post\' word', 'iqconnetik'),
+					'description' => esc_html__('Post navigation has to be chosen', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_post_nav_word_next', esc_html__('Next', 'iqconnetik')),
+				),
+				'blog_single_related_posts_heading'     => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Related posts settings', 'iqconnetik'),
+					'description' => esc_html__('Related posts are based on post tags', 'iqconnetik'),
+				),
+				'blog_single_related_posts'             => array(
+					'type'    => 'select',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Related posts', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_related_posts', ''),
+					'choices' => array(
+						''                => esc_html__('Hidden', 'iqconnetik'),
+						'list'            => esc_html__('Simple list', 'iqconnetik'),
+						'list-thumbnails' => esc_html__('List with thumbnails', 'iqconnetik'),
+						'grid'            => esc_html__('Posts grid', 'iqconnetik'),
+					),
+				),
+				'blog_single_related_posts_title'       => array(
+					'type'        => 'text',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Related posts title', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_related_posts_title', ''),
+					'description' => esc_html__('Related posts heading title', 'iqconnetik'),
+				),
+				'blog_single_related_posts_number'      => array(
+					'type'        => 'number',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Related posts number', 'iqconnetik'),
+					'default'     => iqconnetik_option('blog_single_related_posts_number', ''),
+					'description' => esc_html__('Related posts layout has to be chosen', 'iqconnetik'),
+				),
+				'blog_single_meta_options_heading'      => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Single post meta options', 'iqconnetik'),
+					'description' => esc_html__('Select what post meta you want to show in single post. Not all layouts will show post meta even if it is checked.', 'iqconnetik'),
+				),
+				'blog_single_hide_meta_icons'           => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Hide icons in the post meta', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_hide_meta_icons', false),
+				),
+				'blog_single_show_author'               => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show author', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_author', true),
+				),
+				'blog_single_show_author_avatar'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show author avatar', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_author_avatar', false),
+				),
+				'blog_single_before_author_word'        => array(
+					'type'    => 'text',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Text before author', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_before_author_word', ''),
+				),
+				'blog_single_show_date'                 => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show date', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_date', true),
+				),
+				'blog_single_before_date_word'          => array(
+					'type'    => 'text',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Text before date', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_before_date_word', ''),
+				),
+				'blog_single_show_categories'           => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show categories', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_categories', true),
+				),
+				'blog_single_show_tags'                 => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show tags', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_tags', true),
+				),
+				'blog_single_before_tags_word'          => array(
+					'type'    => 'text',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Text before tags', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_before_tags_word', ''),
+				),
+				'blog_single_show_views'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show views', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_views', true),
+				),
+				'blog_single_before_views_word'                 => array(
+					'type'    => 'text',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Text before views', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_before_views_word', ''),
+				),
+				'blog_single_show_likes'                       => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show likes', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_likes', true),
+				),
+				'blog_single_show_comments_link'        => array(
+					'type'    => 'select',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show comments count', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_show_comments_link', true),
+					'choices' => array(
+						''       => esc_html__('None', 'iqconnetik'),
+						'text'   => esc_html__('Comments number with text', 'iqconnetik'),
+						'number' => esc_html__('Only comments number', 'iqconnetik'),
+					),
+				),
+				'blog_single_comments_title_reply'      => array(
+					'type'    => 'text',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Comments form title', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_comments_title_reply', ''),
+				),
+				'blog_single_share_options_heading'             => array(
+					'type'        => 'block-heading',
+					'section'     => 'section_blog_post',
+					'label'       => esc_html__('Share buttons', 'iqconnetik'),
+				),
+				'blog_single_share_facebook'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show share button facebook', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_share_facebook', true),
+				),
+				'blog_single_share_twitter'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show share button twitter', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_share_twitter', true),
+				),
+				'blog_single_share_telegram'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show share button telegram', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_share_telegram', true),
+				),
+				'blog_single_share_pinterest'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show share button pinterest', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_share_pinterest', true),
+				),
+				'blog_single_share_linkedin'                      => array(
+					'type'    => 'checkbox',
+					'section' => 'section_blog_post',
+					'label'   => esc_html__('Show share button linkedin', 'iqconnetik'),
+					'default' => iqconnetik_option('blog_single_share_linkedin', true),
+				),
+
+				///////////////
+				// animation //
+				///////////////
+				'animation_enabled'                     => array(
+					'type'        => 'checkbox',
+					'section'     => 'section_animation',
+					'label'       => esc_html__('Enable CSS animation for elements', 'iqconnetik'),
+					'default'     => iqconnetik_option('animation_enabled', false),
+					'description' => esc_html__('Please note that additional JS file (2 kB) and CSS file (25 kB) will be loaded if enabled', 'iqconnetik'),
+				),
+				'animation_sidebar_widgets'             => array(
+					'type'        => 'select',
+					'section'     => 'section_animation',
+					'label'       => esc_html__('Animation for main sidebar widgets', 'iqconnetik'),
+					'description' => esc_html__('If you want to animate main sidebar widgets - select one of predefined animation type', 'iqconnetik'),
+					'default'     => iqconnetik_option('animation_sidebar_widgets', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'animation_footer_top_widgets'              => array(
+					'type'        => 'select',
+					'section'     => 'section_animation',
+					'label'       => esc_html__('Animation for footer top widgets', 'iqconnetik'),
+					'description' => esc_html__('If you want to animate footer top widgets - select one of predefined animation type', 'iqconnetik'),
+					'default'     => iqconnetik_option('animation_footer_top_widgets', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'animation_footer_widgets'              => array(
+					'type'        => 'select',
+					'section'     => 'section_animation',
+					'label'       => esc_html__('Animation for footer widgets', 'iqconnetik'),
+					'description' => esc_html__('If you want to animate footer widgets - select one of predefined animation type', 'iqconnetik'),
+					'default'     => iqconnetik_option('animation_footer_widgets', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'animation_feed_posts'                  => array(
+					'type'        => 'select',
+					'section'     => 'section_animation',
+					'label'       => esc_html__('Animation for posts in posts feed', 'iqconnetik'),
+					'description' => esc_html__('If you want to animate blog feed posts - select one of predefined animation type', 'iqconnetik'),
+					'default'     => iqconnetik_option('animation_feed_posts', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+				'animation_feed_posts_thumbnail'        => array(
+					'type'        => 'select',
+					'section'     => 'section_animation',
+					'label'       => esc_html__('Animation for posts thumbnails in posts feed', 'iqconnetik'),
+					'description' => esc_html__('If you want to animate blog feed posts thumbnail - select one of predefined animation type', 'iqconnetik'),
+					'default'     => iqconnetik_option('animation_feed_posts_thumbnail', ''),
+					'choices'     => iqconnetik_get_animation_options(),
+				),
+			) //options array
+		); //apply_filters
+	}
+endif;
+
+//init customizer with 'iqconnetik_customizer_settings_array' settings filter
+add_action('init', 'iqconnetik_init_customizer_class');
+if (!function_exists('iqconnetik_init_customizer_class')) :
+	function iqconnetik_init_customizer_class()
+	{
+		$iqconnetik_customizer = new Iqconnetik_Customizer(
+			iqconnetik_customizer_settings_array()
+		);
+	}
+endif;

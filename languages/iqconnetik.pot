@@ -1,0 +1,3100 @@
+# Copyright (C) 2024 iqconnetik
+# This file is distributed under the same license as the iqconnetik package.
+msgid ""
+msgstr ""
+"Project-Id-Version: iqconnetik\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: support@modernwebtemplates.com\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wp-content/themes/iqconnetik/404.php:43
+msgid "Oops, Sorry We Can’t Find That Page!"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/404.php:45
+msgid "Go Back"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/404.php:47
+msgid "Go Home"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:38
+msgid "Write your comment"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:42
+msgid "Name"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:44, wp-content/themes/iqconnetik/inc/customizer.php:899
+msgid "Email"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:48
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:49
+msgid "Send"
+msgstr ""
+
+#. translators: 1: number of comments
+#: wp-content/themes/iqconnetik/comments.php:92
+msgctxt "comments title"
+msgid "%1$s comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/comments.php:87
+msgctxt "comments title"
+msgid "One comment"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:69
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/comments.php:64
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/comments.php:134
+msgid "Comments are closed."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/footer.php:99
+msgid "Close (Esc)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/footer.php:100
+msgid "Share"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/footer.php:101
+msgid "Toggle fullscreen"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/footer.php:102
+msgid "Zoom in/out"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:60
+msgid "Search Toggler"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:71, wp-content/themes/iqconnetik/inc/setup.php:492
+msgid "Sign up"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:74, wp-content/themes/iqconnetik/header.php:107
+msgid "Sign in"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:86
+msgid "Log out"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:88
+msgid "Site Admin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:78, wp-content/themes/iqconnetik/inc/setup.php:477
+msgid "Email address"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:79, wp-content/themes/iqconnetik/inc/setup.php:480
+msgid "Password"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:80
+msgid "Remember Me"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:81, wp-content/themes/iqconnetik/header.php:106
+msgid "Log in"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:82
+msgid "Remember me"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:94
+msgid "Lost your password?"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:100
+msgid "Registration"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/header.php:111
+msgid "Login Toggler"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/searchform.php:17
+msgctxt "placeholder"
+msgid "Search"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/searchform.php:23
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:28
+msgid "Theme options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:29
+msgid "Theme specific options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:46
+msgid "Theme Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:47
+msgid "Site layout options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:53
+msgid "Theme Meta"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:54
+msgid "Email, phone, address etc. Appears in various template parts depending from choosen sections layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:62
+msgid "Header Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:63
+msgid "Choose header options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:69
+msgid "Title Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:70
+msgid "Choose title options. Yoast SEO plugin required for breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:76
+msgid "Main Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:77
+msgid "Choose main section options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:83
+msgid "404 Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:84
+msgid "Choose 404 section options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:90
+msgid "Top Footer Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:91
+msgid "Choose top footer section options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:97
+msgid "Footer Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:98
+msgid "Choose footer options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:104
+msgid "Copyright Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:105
+msgid "Choose copyright options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:111, wp-content/themes/iqconnetik/inc/customizer.php:2383, wp-content/themes/iqconnetik/template-parts/title/title-text.php:25
+msgid "Blog"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:112
+msgid "Blog display options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:118
+msgid "Single Post"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:119
+msgid "Single post display options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:125
+msgid "Fonts"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:126
+msgid "Choose Google fonts"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:132
+msgid "Services, Portfolio, Team"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:133
+msgid "Choose separate categories for displaying Services, Portfolio, Team. They will be removed from regular blog displaying"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:139
+msgid "Animation"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:140
+msgid "You can select elements that you want to animate on your page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:209, wp-content/themes/iqconnetik/inc/customizer.php:307
+msgid "Light color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:211
+msgid "Using as a background for light sections and as a font color in inversed sections."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:216
+msgid "Font color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:218, wp-content/themes/iqconnetik/inc/customizer.php:225
+msgid "Using as a font color."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:223
+msgid "Dark Font color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:230
+msgid "Background color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:232
+msgid "Background color for elements in light section."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:237
+msgid "Border color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:239
+msgid "Using as a border color."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:244
+msgid "Dark Border color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:246
+msgid "Using as a dark border color."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:251, wp-content/themes/iqconnetik/inc/customizer.php:308
+msgid "Dark color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:253
+msgid "Using as a background for inversed muted sections."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:258
+msgid "Dark Grey color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:260
+msgid "Using as headings color and a background for inversed sections."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:265
+msgid "Grey color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:267
+msgid "Using as a background for light muted sections."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:272, wp-content/themes/iqconnetik/inc/customizer.php:304
+msgid "Accent color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:274
+msgid "Using as a main accent color."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:279
+msgid "Accent color 2"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:281, wp-content/themes/iqconnetik/inc/customizer.php:288, wp-content/themes/iqconnetik/inc/customizer.php:295
+msgid "Using as a accent color."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:286
+msgid "Accent color 3"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:293
+msgid "Accent color 4"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:300
+msgid "Color for icons in post meta"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:303, wp-content/themes/iqconnetik/inc/customizer.php:426, wp-content/themes/iqconnetik/inc/customizer.php:442, wp-content/themes/iqconnetik/inc/customizer.php:472, wp-content/themes/iqconnetik/inc/customizer.php:488, wp-content/themes/iqconnetik/inc/customizer.php:518, wp-content/themes/iqconnetik/inc/customizer.php:534, wp-content/themes/iqconnetik/inc/customizer.php:598, wp-content/themes/iqconnetik/inc/customizer.php:614, wp-content/themes/iqconnetik/inc/customizer.php:637, wp-content/themes/iqconnetik/inc/customizer.php:653, wp-content/themes/iqconnetik/inc/customizer.php:688, wp-content/themes/iqconnetik/inc/customizer.php:708, wp-content/themes/iqconnetik/inc/customizer.php:1110, wp-content/themes/iqconnetik/inc/customizer.php:1389, wp-content/themes/iqconnetik/inc/customizer.php:1409, wp-content/themes/iqconnetik/inc/customizer.php:1483, wp-content/themes/iqconnetik/inc/customizer.php:1506, wp-content/themes/iqconnetik/inc/customizer.php:1526, wp-content/themes/iqconnetik/inc/customizer.php:1612, wp-content/themes/iqconnetik/inc/customizer.php:1633, wp-content/themes/iqconnetik/inc/customizer.php:1654, wp-content/themes/iqconnetik/inc/customizer.php:1701, wp-content/themes/iqconnetik/inc/customizer.php:1717, wp-content/themes/iqconnetik/inc/customizer.php:1747, wp-content/themes/iqconnetik/inc/customizer.php:1763, wp-content/themes/iqconnetik/inc/customizer.php:1794, wp-content/themes/iqconnetik/inc/customizer.php:1810, wp-content/themes/iqconnetik/inc/customizer.php:1855, wp-content/themes/iqconnetik/inc/customizer.php:1875, wp-content/themes/iqconnetik/inc/customizer.php:1959, wp-content/themes/iqconnetik/inc/customizer.php:1981, wp-content/themes/iqconnetik/inc/customizer.php:2025, wp-content/themes/iqconnetik/inc/customizer.php:2045, wp-content/themes/iqconnetik/inc/customizer.php:2154, wp-content/themes/iqconnetik/inc/customizer.php:2174, wp-content/themes/iqconnetik/inc/customizer.php:2266, wp-content/themes/iqconnetik/inc/customizer.php:2286, wp-content/themes/iqconnetik/inc/options.php:458, wp-content/themes/iqconnetik/inc/woocommerce.php:501, wp-content/themes/iqconnetik/inc/woocommerce.php:513, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:740, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:761, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:269
+msgid "Default"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:305
+msgid "Accent 2 color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:306
+msgid "Borders color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:309
+msgid "Darker color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:321
+msgid "Intro Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:322
+msgid "Set your settings for homepage intro section. Leave blank if not needed."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:327
+msgid "Intro Section Position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:330, wp-content/themes/iqconnetik/inc/customizer.php:2621
+msgid "Hidden"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:331
+msgid "Before header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:332
+msgid "After header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:338
+msgid "Intro Section Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:341
+msgid "Background image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:342
+msgid "Left side image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:343
+msgid "Right side image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:344
+msgid "Top image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:345
+msgid "Bottom image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:351
+msgid "Full Screen Intro Height"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:357
+msgid "Intro Section Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:364
+msgid "Intro Section Background Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:370, wp-content/themes/iqconnetik/inc/customizer.php:1021, wp-content/themes/iqconnetik/inc/customizer.php:1077, wp-content/themes/iqconnetik/inc/customizer.php:1446, wp-content/themes/iqconnetik/inc/customizer.php:1905, wp-content/themes/iqconnetik/inc/customizer.php:2075, wp-content/themes/iqconnetik/inc/customizer.php:2204, wp-content/themes/iqconnetik/inc/customizer.php:2316
+msgid "Cover background image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:376, wp-content/themes/iqconnetik/inc/customizer.php:1027, wp-content/themes/iqconnetik/inc/customizer.php:1083, wp-content/themes/iqconnetik/inc/customizer.php:1452, wp-content/themes/iqconnetik/inc/customizer.php:1911, wp-content/themes/iqconnetik/inc/customizer.php:2081, wp-content/themes/iqconnetik/inc/customizer.php:2210, wp-content/themes/iqconnetik/inc/customizer.php:2322
+msgid "Fixed background image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:382, wp-content/themes/iqconnetik/inc/customizer.php:1033, wp-content/themes/iqconnetik/inc/customizer.php:1089, wp-content/themes/iqconnetik/inc/customizer.php:1458, wp-content/themes/iqconnetik/inc/customizer.php:1602, wp-content/themes/iqconnetik/inc/customizer.php:1917, wp-content/themes/iqconnetik/inc/customizer.php:2087, wp-content/themes/iqconnetik/inc/customizer.php:2216, wp-content/themes/iqconnetik/inc/customizer.php:2328
+msgid "Overlay for background image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:389
+msgid "Intro Section Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:395
+msgid "Make image bigger on large screen"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:396
+msgid "Scale image for large screens"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:402
+msgid "Make image position absolute on large screen"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:403
+msgid "Scale image for large screens (only for left/right side image layout)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:409
+msgid "Animation for intro image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:410, wp-content/themes/iqconnetik/inc/customizer.php:456, wp-content/themes/iqconnetik/inc/customizer.php:502, wp-content/themes/iqconnetik/inc/customizer.php:548, wp-content/themes/iqconnetik/inc/customizer.php:568, wp-content/themes/iqconnetik/inc/customizer.php:588, wp-content/themes/iqconnetik/inc/customizer.php:667, wp-content/themes/iqconnetik/inc/customizer.php:1731, wp-content/themes/iqconnetik/inc/customizer.php:1777, wp-content/themes/iqconnetik/inc/customizer.php:1824
+msgid "Animation should be enabled"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:417
+msgid "Intro Section Pre Heading text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:423
+msgid "Intro Pre Heading top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:439
+msgid "Intro Pre Heading bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:455
+msgid "Animation for pre intro heading"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:463
+msgid "Intro Section Heading text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:469
+msgid "Intro Heading top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:485
+msgid "Intro Heading bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:501
+msgid "Animation for intro heading"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:509
+msgid "Intro Section description text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:515
+msgid "Intro Description top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:531
+msgid "Intro Description bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:547
+msgid "Animation for intro description text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:555
+msgid "Intro Primary Action Button Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:561
+msgid "Intro Primary Action Button URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:567
+msgid "Animation for first intro button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:575
+msgid "Intro Secondary Action Button Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:581
+msgid "Intro Secondary Action Button URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:587
+msgid "Animation for second intro button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:595
+msgid "Intro Buttons top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:611
+msgid "Intro Buttons bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:627
+msgid "Intro Section Shortcode"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:628
+msgid "You can put shortcode here. It will appear below Intro description"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:634
+msgid "Intro Shortcode top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:650
+msgid "Intro Shortcode bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:666
+msgid "Animation for intro shortcode"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:674
+msgid "Intro Section Text Alignment"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:677
+msgid "Left"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:678
+msgid "Centered"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:679, wp-content/themes/iqconnetik/inc/customizer.php:1111, wp-content/themes/iqconnetik/inc/customizer.php:1655
+msgid "Right"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:685
+msgid "Intro section top padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:689, wp-content/themes/iqconnetik/inc/customizer.php:709, wp-content/themes/iqconnetik/inc/customizer.php:1390, wp-content/themes/iqconnetik/inc/customizer.php:1410, wp-content/themes/iqconnetik/inc/customizer.php:1507, wp-content/themes/iqconnetik/inc/customizer.php:1527, wp-content/themes/iqconnetik/inc/customizer.php:1613, wp-content/themes/iqconnetik/inc/customizer.php:1634, wp-content/themes/iqconnetik/inc/customizer.php:1856, wp-content/themes/iqconnetik/inc/customizer.php:1876, wp-content/themes/iqconnetik/inc/customizer.php:2026, wp-content/themes/iqconnetik/inc/customizer.php:2046, wp-content/themes/iqconnetik/inc/customizer.php:2155, wp-content/themes/iqconnetik/inc/customizer.php:2175, wp-content/themes/iqconnetik/inc/customizer.php:2267, wp-content/themes/iqconnetik/inc/customizer.php:2287, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:741, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:762
+msgid "0"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:690, wp-content/themes/iqconnetik/inc/customizer.php:710, wp-content/themes/iqconnetik/inc/customizer.php:1391, wp-content/themes/iqconnetik/inc/customizer.php:1411, wp-content/themes/iqconnetik/inc/customizer.php:1508, wp-content/themes/iqconnetik/inc/customizer.php:1528, wp-content/themes/iqconnetik/inc/customizer.php:1614, wp-content/themes/iqconnetik/inc/customizer.php:1635, wp-content/themes/iqconnetik/inc/customizer.php:1857, wp-content/themes/iqconnetik/inc/customizer.php:1877, wp-content/themes/iqconnetik/inc/customizer.php:2027, wp-content/themes/iqconnetik/inc/customizer.php:2047, wp-content/themes/iqconnetik/inc/customizer.php:2156, wp-content/themes/iqconnetik/inc/customizer.php:2176, wp-content/themes/iqconnetik/inc/customizer.php:2268, wp-content/themes/iqconnetik/inc/customizer.php:2288, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:747, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:768
+msgid "1em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:691, wp-content/themes/iqconnetik/inc/customizer.php:711, wp-content/themes/iqconnetik/inc/customizer.php:1392, wp-content/themes/iqconnetik/inc/customizer.php:1412, wp-content/themes/iqconnetik/inc/customizer.php:1509, wp-content/themes/iqconnetik/inc/customizer.php:1529, wp-content/themes/iqconnetik/inc/customizer.php:1615, wp-content/themes/iqconnetik/inc/customizer.php:1636, wp-content/themes/iqconnetik/inc/customizer.php:1858, wp-content/themes/iqconnetik/inc/customizer.php:1878, wp-content/themes/iqconnetik/inc/customizer.php:2028, wp-content/themes/iqconnetik/inc/customizer.php:2048, wp-content/themes/iqconnetik/inc/customizer.php:2157, wp-content/themes/iqconnetik/inc/customizer.php:2177, wp-content/themes/iqconnetik/inc/customizer.php:2269, wp-content/themes/iqconnetik/inc/customizer.php:2289, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:748, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:769
+msgid "2em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:692, wp-content/themes/iqconnetik/inc/customizer.php:712, wp-content/themes/iqconnetik/inc/customizer.php:1393, wp-content/themes/iqconnetik/inc/customizer.php:1413, wp-content/themes/iqconnetik/inc/customizer.php:1510, wp-content/themes/iqconnetik/inc/customizer.php:1530, wp-content/themes/iqconnetik/inc/customizer.php:1616, wp-content/themes/iqconnetik/inc/customizer.php:1637, wp-content/themes/iqconnetik/inc/customizer.php:1859, wp-content/themes/iqconnetik/inc/customizer.php:1879, wp-content/themes/iqconnetik/inc/customizer.php:2029, wp-content/themes/iqconnetik/inc/customizer.php:2049, wp-content/themes/iqconnetik/inc/customizer.php:2158, wp-content/themes/iqconnetik/inc/customizer.php:2178, wp-content/themes/iqconnetik/inc/customizer.php:2270, wp-content/themes/iqconnetik/inc/customizer.php:2290, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:749, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:770
+msgid "3em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:693, wp-content/themes/iqconnetik/inc/customizer.php:713, wp-content/themes/iqconnetik/inc/customizer.php:1394, wp-content/themes/iqconnetik/inc/customizer.php:1414, wp-content/themes/iqconnetik/inc/customizer.php:1511, wp-content/themes/iqconnetik/inc/customizer.php:1531, wp-content/themes/iqconnetik/inc/customizer.php:1617, wp-content/themes/iqconnetik/inc/customizer.php:1638, wp-content/themes/iqconnetik/inc/customizer.php:1860, wp-content/themes/iqconnetik/inc/customizer.php:1880, wp-content/themes/iqconnetik/inc/customizer.php:2030, wp-content/themes/iqconnetik/inc/customizer.php:2050, wp-content/themes/iqconnetik/inc/customizer.php:2159, wp-content/themes/iqconnetik/inc/customizer.php:2179, wp-content/themes/iqconnetik/inc/customizer.php:2271, wp-content/themes/iqconnetik/inc/customizer.php:2291, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:750, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:771
+msgid "4em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:694, wp-content/themes/iqconnetik/inc/customizer.php:714, wp-content/themes/iqconnetik/inc/customizer.php:1395, wp-content/themes/iqconnetik/inc/customizer.php:1415, wp-content/themes/iqconnetik/inc/customizer.php:1512, wp-content/themes/iqconnetik/inc/customizer.php:1532, wp-content/themes/iqconnetik/inc/customizer.php:1618, wp-content/themes/iqconnetik/inc/customizer.php:1639, wp-content/themes/iqconnetik/inc/customizer.php:1861, wp-content/themes/iqconnetik/inc/customizer.php:1881, wp-content/themes/iqconnetik/inc/customizer.php:2031, wp-content/themes/iqconnetik/inc/customizer.php:2051, wp-content/themes/iqconnetik/inc/customizer.php:2160, wp-content/themes/iqconnetik/inc/customizer.php:2180, wp-content/themes/iqconnetik/inc/customizer.php:2272, wp-content/themes/iqconnetik/inc/customizer.php:2292, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:751, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:772
+msgid "5em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:695, wp-content/themes/iqconnetik/inc/customizer.php:715, wp-content/themes/iqconnetik/inc/customizer.php:1396, wp-content/themes/iqconnetik/inc/customizer.php:1416, wp-content/themes/iqconnetik/inc/customizer.php:1513, wp-content/themes/iqconnetik/inc/customizer.php:1533, wp-content/themes/iqconnetik/inc/customizer.php:1619, wp-content/themes/iqconnetik/inc/customizer.php:1640, wp-content/themes/iqconnetik/inc/customizer.php:1862, wp-content/themes/iqconnetik/inc/customizer.php:1882, wp-content/themes/iqconnetik/inc/customizer.php:2032, wp-content/themes/iqconnetik/inc/customizer.php:2052, wp-content/themes/iqconnetik/inc/customizer.php:2161, wp-content/themes/iqconnetik/inc/customizer.php:2181, wp-content/themes/iqconnetik/inc/customizer.php:2273, wp-content/themes/iqconnetik/inc/customizer.php:2293
+msgid "6em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:696, wp-content/themes/iqconnetik/inc/customizer.php:716, wp-content/themes/iqconnetik/inc/customizer.php:1397, wp-content/themes/iqconnetik/inc/customizer.php:1417, wp-content/themes/iqconnetik/inc/customizer.php:1514, wp-content/themes/iqconnetik/inc/customizer.php:1534, wp-content/themes/iqconnetik/inc/customizer.php:1620, wp-content/themes/iqconnetik/inc/customizer.php:1641, wp-content/themes/iqconnetik/inc/customizer.php:1863, wp-content/themes/iqconnetik/inc/customizer.php:1883, wp-content/themes/iqconnetik/inc/customizer.php:2033, wp-content/themes/iqconnetik/inc/customizer.php:2053, wp-content/themes/iqconnetik/inc/customizer.php:2162, wp-content/themes/iqconnetik/inc/customizer.php:2182, wp-content/themes/iqconnetik/inc/customizer.php:2274, wp-content/themes/iqconnetik/inc/customizer.php:2294
+msgid "7em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:697, wp-content/themes/iqconnetik/inc/customizer.php:717, wp-content/themes/iqconnetik/inc/customizer.php:1398, wp-content/themes/iqconnetik/inc/customizer.php:1418, wp-content/themes/iqconnetik/inc/customizer.php:1515, wp-content/themes/iqconnetik/inc/customizer.php:1535, wp-content/themes/iqconnetik/inc/customizer.php:1621, wp-content/themes/iqconnetik/inc/customizer.php:1642, wp-content/themes/iqconnetik/inc/customizer.php:1864, wp-content/themes/iqconnetik/inc/customizer.php:1884, wp-content/themes/iqconnetik/inc/customizer.php:2034, wp-content/themes/iqconnetik/inc/customizer.php:2054, wp-content/themes/iqconnetik/inc/customizer.php:2163, wp-content/themes/iqconnetik/inc/customizer.php:2183, wp-content/themes/iqconnetik/inc/customizer.php:2275, wp-content/themes/iqconnetik/inc/customizer.php:2295
+msgid "8em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:698, wp-content/themes/iqconnetik/inc/customizer.php:718, wp-content/themes/iqconnetik/inc/customizer.php:1399, wp-content/themes/iqconnetik/inc/customizer.php:1419, wp-content/themes/iqconnetik/inc/customizer.php:1516, wp-content/themes/iqconnetik/inc/customizer.php:1536, wp-content/themes/iqconnetik/inc/customizer.php:1622, wp-content/themes/iqconnetik/inc/customizer.php:1643, wp-content/themes/iqconnetik/inc/customizer.php:1865, wp-content/themes/iqconnetik/inc/customizer.php:1885, wp-content/themes/iqconnetik/inc/customizer.php:2035, wp-content/themes/iqconnetik/inc/customizer.php:2055, wp-content/themes/iqconnetik/inc/customizer.php:2164, wp-content/themes/iqconnetik/inc/customizer.php:2184, wp-content/themes/iqconnetik/inc/customizer.php:2276, wp-content/themes/iqconnetik/inc/customizer.php:2296
+msgid "9em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:699, wp-content/themes/iqconnetik/inc/customizer.php:719, wp-content/themes/iqconnetik/inc/customizer.php:1400, wp-content/themes/iqconnetik/inc/customizer.php:1420, wp-content/themes/iqconnetik/inc/customizer.php:1517, wp-content/themes/iqconnetik/inc/customizer.php:1537, wp-content/themes/iqconnetik/inc/customizer.php:1623, wp-content/themes/iqconnetik/inc/customizer.php:1644, wp-content/themes/iqconnetik/inc/customizer.php:1866, wp-content/themes/iqconnetik/inc/customizer.php:1886, wp-content/themes/iqconnetik/inc/customizer.php:2036, wp-content/themes/iqconnetik/inc/customizer.php:2056, wp-content/themes/iqconnetik/inc/customizer.php:2165, wp-content/themes/iqconnetik/inc/customizer.php:2185, wp-content/themes/iqconnetik/inc/customizer.php:2277, wp-content/themes/iqconnetik/inc/customizer.php:2297
+msgid "10em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:705
+msgid "Intro section bottom padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:725
+msgid "Show social links if they set"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:731
+msgid "Intro section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:744
+msgid "Logo Inverse"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:750
+msgid "Logo Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:753
+msgid "Left image and right text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:754
+msgid "Top image and bottom text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:755
+msgid "Image between text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:761
+msgid "Logo Primary Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:767
+msgid "Logo Secondary Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:773
+msgid "Logo additional vertical padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:774
+msgid "Will make header taller in top position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:780
+msgid "Logo Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:787
+msgid "Logo additional horizontal padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:788
+msgid "This will add an extra horizontal padding for logo"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:798
+msgid "Select global preset of Theme options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:801
+msgid "No preset"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:802
+msgid "First preset"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:803
+msgid "Second preset"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:809
+msgid "Global container max width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:812, wp-content/themes/iqconnetik/inc/customizer.php:825, wp-content/themes/iqconnetik/inc/customizer.php:838
+msgid "1520px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:813, wp-content/themes/iqconnetik/inc/customizer.php:826, wp-content/themes/iqconnetik/inc/customizer.php:839
+msgid "1170px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:814, wp-content/themes/iqconnetik/inc/customizer.php:827, wp-content/themes/iqconnetik/inc/customizer.php:840
+msgid "960px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:815, wp-content/themes/iqconnetik/inc/customizer.php:828, wp-content/themes/iqconnetik/inc/customizer.php:841
+msgid "720px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:821
+msgid "Archive container max width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:824, wp-content/themes/iqconnetik/inc/customizer.php:837
+msgid "Inherit from Global"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:834
+msgid "Single post container max width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:847
+msgid "Boxed"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:853
+msgid "Page preloader"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:857
+msgid "No preloader"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:858
+msgid "Cover page preloader"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:859
+msgid "Corner page preloader"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:865
+msgid "Fade in page on load"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:872
+msgid "Enable page 'to top' button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:879
+msgid "Use minified version of CSS files"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:880
+msgid "You can use compressed versions of your static files for best performance"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:887
+msgid "Put jQuery script to footer for guest users"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:888
+msgid "If some plugins requires jQuery, it will be loaded in the footer section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:905
+msgid "Email label"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:911
+msgid "Email 2"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:917
+msgid "Email 2 label"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:923
+msgid "Phone"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:929
+msgid "Phone label"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:935
+msgid "Phone 2"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:941
+msgid "Phone 2 label"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:947
+msgid "Address"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:953
+msgid "Address label"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:959
+msgid "Opening hours"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:965
+msgid "Opening hours label"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:972
+msgid "Telegram URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:978
+msgid "Facebook URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:984
+msgid "Instagram URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:990
+msgid "YouTube URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:996
+msgid "Twitter URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1002
+msgid "Pinterest URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1008
+msgid "LinkedIn URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1042
+msgid "Header Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1045, wp-content/themes/iqconnetik/inc/customizer.php:1100, wp-content/themes/iqconnetik/inc/customizer.php:1161, wp-content/themes/iqconnetik/inc/customizer.php:1206, wp-content/themes/iqconnetik/inc/customizer.php:1238, wp-content/themes/iqconnetik/inc/customizer.php:1668, wp-content/themes/iqconnetik/inc/customizer.php:2101, wp-content/themes/iqconnetik/inc/customizer.php:2230, wp-content/themes/iqconnetik/inc/customizer.php:2589
+msgid "Disabled"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1046
+msgid "Logo, menu and button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1047
+msgid "Toplogo section and bottom menu, button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1048
+msgid "Left logo and menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1049
+msgid "Header Side Left"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1050
+msgid "Header Side Right"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1051
+msgid "Header Side Left Sticked"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1052
+msgid "Header Side Right Sticked"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1058
+msgid "Full Width Header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1064
+msgid "Header Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1071, wp-content/themes/iqconnetik/inc/customizer.php:1899, wp-content/themes/iqconnetik/inc/customizer.php:2069
+msgid "Background Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1096
+msgid "Show Search"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1098, wp-content/themes/iqconnetik/inc/customizer.php:1176, wp-content/themes/iqconnetik/inc/customizer.php:1203
+msgid "If header layout contains it"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1101
+msgid "Enable"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1107
+msgid "Align main menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1112, wp-content/themes/iqconnetik/inc/customizer.php:1656
+msgid "Center"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1119
+msgid "Put main menu mobile toggler in header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1125
+msgid "Position absolute header (Home Page)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1131
+msgid "Position absolute header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1137
+msgid "Remove background color"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1138
+msgid "Make header transparent"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1144, wp-content/themes/iqconnetik/inc/customizer.php:1266, wp-content/themes/iqconnetik/inc/customizer.php:1372, wp-content/themes/iqconnetik/inc/customizer.php:1838, wp-content/themes/iqconnetik/inc/customizer.php:2008, wp-content/themes/iqconnetik/inc/customizer.php:2137
+msgid "Top border"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1151, wp-content/themes/iqconnetik/inc/customizer.php:1273, wp-content/themes/iqconnetik/inc/customizer.php:1379, wp-content/themes/iqconnetik/inc/customizer.php:1845, wp-content/themes/iqconnetik/inc/customizer.php:2015, wp-content/themes/iqconnetik/inc/customizer.php:2144
+msgid "Bottom border"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1158
+msgid "Sticky Header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1162
+msgid "Always visible"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1163
+msgid "Visible on scrolling to top"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1169
+msgid "Header section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1177
+msgid "Button Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1183
+msgid "Add Button Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1189
+msgid "Button URL"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1196
+msgid "Header toplogo options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1197
+msgid "You need to fill theme meta options to show them in header toplogo."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1202
+msgid "Toplogo Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1207
+msgid "Logo, meta and social links"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1208
+msgid "Left meta, centered logo and right search"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1214
+msgid "Header Toplogo Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1221
+msgid "Toplogo section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1229
+msgid "Header topline options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1230
+msgid "You need to fill theme meta options to show them in header topline."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1235
+msgid "Topline Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1239
+msgid "Left text, meta and right social icons"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1240
+msgid "Left social icons and right search"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1246
+msgid "Full Width Header Topline"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1252
+msgid "Header Topline Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1259
+msgid "Topline section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1280
+msgid "Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1281, wp-content/themes/iqconnetik/inc/customizer.php:1288, wp-content/themes/iqconnetik/inc/customizer.php:1295, wp-content/themes/iqconnetik/inc/customizer.php:1302, wp-content/themes/iqconnetik/inc/customizer.php:1309
+msgid "If topline layout contains it"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1287
+msgid "Show Meta Opening Hours"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1294
+msgid "Show Meta Mail"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1301
+msgid "Show Meta Phone"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1308
+msgid "Show Meta Address"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1315
+msgid "Logo modal Background image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1322
+msgid "Text for Login modal"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1332
+msgid "Title Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1335
+msgid "Left title with bottom breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1336
+msgid "Title above breadcrumbs centered"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1337
+msgid "Left title with right breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1338
+msgid "Left title with inline breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1339
+msgid "Centered title with bottom right breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1340
+msgid "Centered small title with bottom small breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1341
+msgid "Left small title with bottom small breadcrumbs"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1347
+msgid "Full Width Title"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1353
+msgid "Show title in title section instead of content area"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1359
+msgid "Show breadcrumbs (Yoast SEO or Rank Math plugins required)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1365
+msgid "Title Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1386, wp-content/themes/iqconnetik/inc/customizer.php:1503, wp-content/themes/iqconnetik/inc/customizer.php:1609, wp-content/themes/iqconnetik/inc/customizer.php:1852, wp-content/themes/iqconnetik/inc/customizer.php:2022, wp-content/themes/iqconnetik/inc/customizer.php:2151, wp-content/themes/iqconnetik/inc/customizer.php:2263
+msgid "Top padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1406, wp-content/themes/iqconnetik/inc/customizer.php:1523, wp-content/themes/iqconnetik/inc/customizer.php:1630, wp-content/themes/iqconnetik/inc/customizer.php:1872, wp-content/themes/iqconnetik/inc/customizer.php:2042, wp-content/themes/iqconnetik/inc/customizer.php:2171, wp-content/themes/iqconnetik/inc/customizer.php:2283
+msgid "Bottom padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1426
+msgid "Title section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1433
+msgid "Hide taxonomy name"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1434
+msgid "You can hide a taxonomy name on taxonomy archives page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1440
+msgid "Title Section Background Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1469, wp-content/themes/iqconnetik/inc/woocommerce.php:498
+msgid "Sidebar width on big screens"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1472
+msgid "Default - 1/3 - 33%"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1473, wp-content/themes/iqconnetik/inc/woocommerce.php:503
+msgid "1/4 - 25%"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1474, wp-content/themes/iqconnetik/inc/woocommerce.php:504
+msgid "30% - 70%"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1480, wp-content/themes/iqconnetik/inc/woocommerce.php:510
+msgid "Sidebar gap width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1484, wp-content/themes/iqconnetik/inc/options.php:407, wp-content/themes/iqconnetik/inc/woocommerce.php:514, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:696
+msgid "10px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1485, wp-content/themes/iqconnetik/inc/options.php:409, wp-content/themes/iqconnetik/inc/woocommerce.php:515, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:706
+msgid "20px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1486, wp-content/themes/iqconnetik/inc/options.php:410, wp-content/themes/iqconnetik/inc/woocommerce.php:516
+msgid "30px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1487, wp-content/themes/iqconnetik/inc/options.php:411, wp-content/themes/iqconnetik/inc/woocommerce.php:517
+msgid "40px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1488, wp-content/themes/iqconnetik/inc/options.php:412, wp-content/themes/iqconnetik/inc/woocommerce.php:518
+msgid "50px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1489, wp-content/themes/iqconnetik/inc/options.php:413, wp-content/themes/iqconnetik/inc/woocommerce.php:519
+msgid "60px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1490, wp-content/themes/iqconnetik/inc/options.php:414, wp-content/themes/iqconnetik/inc/woocommerce.php:520
+msgid "80px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1491, wp-content/themes/iqconnetik/inc/options.php:415
+msgid "100px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1497
+msgid "Sticky sidebar"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1543
+msgid "Main section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1550
+msgid "Sidebar font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1557
+msgid "Theme Version"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1558
+msgid "Light or dark version (not working for Elementor pages)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1561, wp-content/themes/iqconnetik/inc/setup.php:124, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:658, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:784
+msgid "Light"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1562, wp-content/themes/iqconnetik/inc/setup.php:154, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:660, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:786
+msgid "Dark"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1571
+msgid "404 Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1577, wp-content/themes/iqconnetik/template-parts/title/title-text.php:32
+msgid "404"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1583
+msgid "404 Text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1589
+msgid "404 Page Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1596
+msgid "404 Page Background Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1624, wp-content/themes/iqconnetik/inc/customizer.php:1645
+msgid "11em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1651
+msgid "Content position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1665, wp-content/themes/iqconnetik/options/taxonomies/category.php:15
+msgid "Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1669
+msgid "Single column"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1670
+msgid "Single column centered"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1671
+msgid "Two columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1672
+msgid "Four columns centered (widgets included)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1678
+msgid "Widgets gap"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1679
+msgid "Used only for 'Three columns centered' layouts"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1686, wp-content/themes/iqconnetik/inc/customizer.php:1944
+msgid "Full Width Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1692, wp-content/themes/iqconnetik/inc/customizer.php:1950
+msgid "Heading text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1698
+msgid "Heading top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1714, wp-content/themes/iqconnetik/inc/customizer.php:1956
+msgid "Heading bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1730
+msgid "Animation for footer_top heading"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1738, wp-content/themes/iqconnetik/inc/customizer.php:1972
+msgid "description text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1744
+msgid "Description top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1760, wp-content/themes/iqconnetik/inc/customizer.php:1978
+msgid "Description bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1776
+msgid "Animation for footer_top description text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1784, wp-content/themes/iqconnetik/inc/customizer.php:1994
+msgid "Shortcode"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1785, wp-content/themes/iqconnetik/inc/customizer.php:1995
+msgid "You can put shortcode here. It will appear below description"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1791
+msgid "Shortcode top margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1807
+msgid "Shortcode bottom margin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1823
+msgid "Animation for shortcode"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1831, wp-content/themes/iqconnetik/inc/customizer.php:2001, wp-content/themes/iqconnetik/inc/setup.php:139
+msgid "Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1892, wp-content/themes/iqconnetik/inc/customizer.php:2062
+msgid "Font Size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1926
+msgid "Bottom Section options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1927
+msgid "You need select 'Four columns centered (widgets included)' layout to add this section after top footer section."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1932
+msgid "Show Bottom Section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:1938
+msgid "Show only on Home page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2098
+msgid "Footer Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2102
+msgid "Equal columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2103
+msgid "First one half column"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2104
+msgid "Second one half column"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2105
+msgid "Full Width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2106
+msgid "Full Width centered"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2107
+msgid "Full Width centered narrow"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2108
+msgid "Second and third narrow columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2109
+msgid "Centered special column"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2110
+msgid "Three equal columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2116
+msgid "Footer widgets gap"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2117
+msgid "Used only for multiple columns layouts"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2124
+msgid "Full Width Footer"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2130
+msgid "Footer Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2191
+msgid "Footer Section Font Size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2198
+msgid "Footer Section Background Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2227
+msgid "Copyright Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2231
+msgid "Only copyright (centered)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2232
+msgid "Only copyright (left aligned)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2233
+msgid "Left copyright and right menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2234
+msgid "Left copyright and right social icons"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2235
+msgid "Left copyright, menu and right social icons"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2236
+msgid "Top copyright and bottom social icons (centered)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2237
+msgid "Left copyright and right social menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2243
+msgid "Copyright text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2244
+msgid "Site name will be displayed, if leave empty"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2250
+msgid "Full Width copyright"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2256
+msgid "Copyright Background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2303
+msgid "Copyright section font size"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2310
+msgid "Copyright Section Background Image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2339
+msgid "Body font options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2340, wp-content/themes/iqconnetik/inc/customizer.php:2352
+msgid "You can use CMD (CTRL) key for select multiple variants and subsets."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2345
+msgid "Body Custom Font"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2351
+msgid "Secondary font options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2357
+msgid "Secondary Custom Font"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2367
+msgid "Blog feed layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2374
+msgid "Blog sidebar position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2375
+msgid "Can be overriden for certain category on category edit page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2382
+msgid "Blog page name. Default: 'Blog'"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2388
+msgid "Show full text instead of excerpt"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2394
+msgid "Custom excerpt length"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2395
+msgid "Words amount"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2401
+msgid "'Read More' text. Leave blank to hide"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2407
+msgid "Hide taxonomy type name in title section"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2409
+msgid "You can hide taxonomy name (ex. 'Tag:') word if you want."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2414
+msgid "Post meta options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2415
+msgid "Select what post meta you want to show in blog feed. Not all layouts will show post meta even if it is checked."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2420, wp-content/themes/iqconnetik/inc/customizer.php:2650
+msgid "Hide icons in the post meta"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2426, wp-content/themes/iqconnetik/inc/customizer.php:2656
+msgid "Show author"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2432, wp-content/themes/iqconnetik/inc/customizer.php:2662
+msgid "Show author avatar"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2438, wp-content/themes/iqconnetik/inc/customizer.php:2668
+msgid "Text before author"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2444, wp-content/themes/iqconnetik/inc/customizer.php:2674
+msgid "Show date"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2450, wp-content/themes/iqconnetik/inc/customizer.php:2680
+msgid "Text before date"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2456, wp-content/themes/iqconnetik/inc/customizer.php:2686
+msgid "Show categories"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2462, wp-content/themes/iqconnetik/inc/customizer.php:2692
+msgid "Show tags"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2468, wp-content/themes/iqconnetik/inc/customizer.php:2698
+msgid "Text before tags"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2474, wp-content/themes/iqconnetik/inc/customizer.php:2704
+msgid "Show views"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2477, wp-content/themes/iqconnetik/inc/customizer.php:2494, wp-content/themes/iqconnetik/inc/customizer.php:2511, wp-content/themes/iqconnetik/inc/customizer.php:2725, wp-content/themes/iqconnetik/inc/options.php:483, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:680, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:783
+msgid "None"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2478
+msgid "Views number with text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2479
+msgid "Only views number"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2485, wp-content/themes/iqconnetik/inc/customizer.php:2710
+msgid "Text before views"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2491, wp-content/themes/iqconnetik/inc/customizer.php:2716
+msgid "Show likes"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2495
+msgid "Likes number with text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2496
+msgid "Only likes number"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2502
+msgid "Text before likes"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2508, wp-content/themes/iqconnetik/inc/customizer.php:2722
+msgid "Show comments count"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2512, wp-content/themes/iqconnetik/inc/customizer.php:2726
+msgid "Comments number with text"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2513, wp-content/themes/iqconnetik/inc/customizer.php:2727
+msgid "Only comments number"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2519, wp-content/themes/iqconnetik/inc/customizer.php:2739
+msgid "Share buttons"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2524, wp-content/themes/iqconnetik/inc/customizer.php:2744
+msgid "Show share button facebook"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2530, wp-content/themes/iqconnetik/inc/customizer.php:2750
+msgid "Show share button twitter"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2536, wp-content/themes/iqconnetik/inc/customizer.php:2756
+msgid "Show share button telegram"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2542, wp-content/themes/iqconnetik/inc/customizer.php:2762
+msgid "Show share button pinterest"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2548, wp-content/themes/iqconnetik/inc/customizer.php:2768
+msgid "Show share button linkedin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2559
+msgid "Blog post sidebar position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2560
+msgid "Can be overriden for certain post by selecting appropriate post template"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2567
+msgid "Show Author Bio"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2568
+msgid "You need to fill Biographical Info to display author bio"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2574
+msgid "'About author' intro word"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2575
+msgid "Leave blank if not needed"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2581
+msgid "Posts navigation settings"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2586
+msgid "Posts Navigation"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2590
+msgid "Only title"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2591
+msgid "Only next/previous word"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2592
+msgid "Background featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2598
+msgid "'Previous post' word"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2599, wp-content/themes/iqconnetik/inc/customizer.php:2606
+msgid "Post navigation has to be chosen"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2600, wp-content/themes/iqconnetik/inc/template-helpers.php:1958
+msgid "Prev"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2605
+msgid "'Next post' word"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2607, wp-content/themes/iqconnetik/inc/template-helpers.php:1959
+msgid "Next"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2612
+msgid "Related posts settings"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2613
+msgid "Related posts are based on post tags"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2618
+msgid "Related posts"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2622
+msgid "Simple list"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2623
+msgid "List with thumbnails"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2624
+msgid "Posts grid"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2630
+msgid "Related posts title"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2632
+msgid "Related posts heading title"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2637
+msgid "Related posts number"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2639
+msgid "Related posts layout has to be chosen"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2644
+msgid "Single post meta options"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2645
+msgid "Select what post meta you want to show in single post. Not all layouts will show post meta even if it is checked."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2733
+msgid "Comments form title"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2778
+msgid "Enable CSS animation for elements"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2780
+msgid "Please note that additional JS file (2 kB) and CSS file (25 kB) will be loaded if enabled"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2785
+msgid "Animation for main sidebar widgets"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2786
+msgid "If you want to animate main sidebar widgets - select one of predefined animation type"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2793
+msgid "Animation for footer top widgets"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2794
+msgid "If you want to animate footer top widgets - select one of predefined animation type"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2801
+msgid "Animation for footer widgets"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2802
+msgid "If you want to animate footer widgets - select one of predefined animation type"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2809
+msgid "Animation for posts in posts feed"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2810
+msgid "If you want to animate blog feed posts - select one of predefined animation type"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2817
+msgid "Animation for posts thumbnails in posts feed"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer.php:2818
+msgid "If you want to animate blog feed posts thumbnail - select one of predefined animation type"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:371, wp-content/themes/iqconnetik/inc/options.php:395, wp-content/themes/iqconnetik/inc/options.php:432, wp-content/themes/iqconnetik/inc/options.php:460
+msgid "Inherit from Customizer settings"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:369
+msgid "Default - Top featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:378
+msgid "Top featured with padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:379
+msgid "Top featured image with background"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:380
+msgid "Half thumbnail"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:393
+msgid "Default - none"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:402
+msgid "1px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:403
+msgid "2px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:404
+msgid "3px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:405
+msgid "4px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:406
+msgid "5px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:408, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:701
+msgid "15px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:416
+msgid "150px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:430
+msgid "Default - top featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:439
+msgid "Wide featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:440
+msgid "Post meta above featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:441
+msgid "Post meta on featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:442
+msgid "Side post meta"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:443
+msgid "Bottom post meta"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:444
+msgid "Title section featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:464
+msgid "Right sidebar"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:465
+msgid "Left sidebar"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:466
+msgid "No sidebar"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:484
+msgid "bounce"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:485
+msgid "flash"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:486
+msgid "pulse"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:487
+msgid "rubberBand"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:488
+msgid "shake"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:489
+msgid "headShake"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:490
+msgid "swing"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:491
+msgid "tada"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:492
+msgid "wobble"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:493
+msgid "jello"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:494
+msgid "heartBeat"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:495
+msgid "bounceIn"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:496
+msgid "fadeIn"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:497
+msgid "fadeInDown"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:498
+msgid "fadeInLeft"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:499
+msgid "fadeInRight"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:500
+msgid "fadeInUp"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:501
+msgid "flip"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:502
+msgid "flipInX"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:503
+msgid "flipInY"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:504
+msgid "lightSpeedIn"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:505
+msgid "jackInTheBox"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/options.php:506
+msgid "zoomIn"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/output-filters.php:216
+msgid "Square"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:129
+msgid "Font"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:134
+msgid "Font Dark"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:144
+msgid "Border"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:149
+msgid "Dark Border"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:159
+msgid "Dark Grey"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:164, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:659, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:785
+msgid "Grey"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:169
+msgid "Accent"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:174
+msgid "Accent 2"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:179
+msgid "Accent 3"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:184
+msgid "Accent 4"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:218
+msgid "Main Menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:219, wp-content/themes/iqconnetik/template-parts/copyright/copyright-3.php:41, wp-content/themes/iqconnetik/template-parts/copyright/copyright-5.php:44, wp-content/themes/iqconnetik/template-parts/copyright/copyright-7.php:41
+msgid "Copyright Menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:238, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:662, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:790
+msgid "Main"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:240, wp-content/themes/iqconnetik/inc/setup.php:384
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:250
+msgid "Footer Top"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:252
+msgid "Add widgets here to appear in your footer top."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:262
+msgid "Footer"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:264, wp-content/themes/iqconnetik/inc/setup.php:276, wp-content/themes/iqconnetik/inc/setup.php:288, wp-content/themes/iqconnetik/inc/setup.php:300
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:274
+msgid "Footer - Three equal columns (first column)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:286
+msgid "Footer - Three equal columns (second column)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:298
+msgid "Footer - Three equal columns (third column)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:310
+msgid "For Toggle Menu Side"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:312
+msgid "Add widgets here to appear in your header."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:322
+msgid "Home page above columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:324
+msgid "These widgets will appear on \"Home\" page above columns."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:334
+msgid "Home page above content"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:336
+msgid "These widgets will appear on \"Home\" page above content"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:346
+msgid "Home page main sidebar"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:348
+msgid "These widgets will appear on \"Home\" page in main sidebar."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:358
+msgid "Home page below content"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:360
+msgid "These widgets will appear on \"Home\" page below main content"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:370
+msgid "Home page below columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:372
+msgid "These widgets will appear on \"Home\" page below columns"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:382
+msgid "Employers"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:396, wp-content/themes/iqconnetik/template-parts/title/title-text.php:40
+msgid "Shop"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:398
+msgid "This sidebar will appear on shop pages"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/setup.php:474
+msgid "Full name"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/static.php:474
+msgid "Iqconnetik Demo"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/static.php:484
+msgid "Iqconnetik Demo (Colorized)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:554
+msgctxt "post"
+msgid "Sticky"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:568
+msgid "Pages: "
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:583
+msgid "Previous page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:584
+msgid "Next page"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:1623
+msgid " Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:1702, wp-content/themes/iqconnetik/inc/template-helpers.php:1710
+msgid "Likes"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:1706
+msgid "Like"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/template-helpers.php:2340
+msgid "Related Posts"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:432
+msgid "Checkout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:475
+msgid "Shop Layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:476
+msgid "These options let you manage sidebar positions on the shop and product pages."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:482
+msgid "Products List"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:483
+msgid "These options let you manage your products list display."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:489
+msgid "Product Share Buttons"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:490
+msgid "These options let you manage your product share buttons."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:502
+msgid "1/3 - 33%"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:527
+msgid "Shop sidebar position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:528
+msgid "This option let you manage sidebar position on the shop page."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:536
+msgid "Product sidebar position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:537
+msgid "This option let you manage sidebar position on product pages."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:545
+msgid "Show Cart Dropdown in Header"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:546
+msgid "Show cart icon in header with product count in shopping cart if added."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:555
+msgid "Hide product \"Add to Cart\" button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:563
+msgid "Show products categories"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:570
+msgid "Show products rating"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:577
+msgid "Show product short description"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:584
+msgid "Show \"Add to Cart\" button over thumbnail"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:591
+msgid "Show \"Cart\" button over thumbnail"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:598
+msgid "Show rating over thumbnail"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:606
+msgid "Show \"Whishlist\" button over thumbnail"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:614
+msgid "Enable Facebook Share Button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:621
+msgid "Enable Twitter Share Button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:628
+msgid "Enable Telegram Share Button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:635
+msgid "Enable Pinterest Share Button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/woocommerce.php:642
+msgid "Enable LinkedIn Share Button"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/empty-page-container.php:3
+msgid "No header, No Footer - Container"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/empty-page.php:3
+msgid "No header, No Footer"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/full-width.php:3
+msgid "Full Width Page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/home.php:3
+msgid "Home - Top and Right Sidebars"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/no-sidebar-1170.php:3
+msgid "No sidebar, 1170px wide"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/no-sidebar-720.php:3
+msgid "No sidebar, 720px wide"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/no-sidebar-960.php:3
+msgid "No sidebar, 960px wide"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/no-sidebar-no-padding.php:3
+msgid "No sidebar, No vertical padding"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/no-sidebar-no-title.php:3
+msgid "No sidebar, No title"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/post-full-width-no-meta-no-thumbnail.php:3
+msgid "Full Width Post - no meta and featured image"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/post-full-width-no-meta.php:3
+msgid "Full Width Post - no meta"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/post-full-width.php:3
+msgid "Full Width Post"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/sidebar-left.php:3
+msgid "Left Sidebar Page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/page-templates/sidebar-right.php:3
+msgid "Right Sidebar Page"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/content-none.php:18
+msgid "Nothing Found"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/content-none.php:47
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/content-none.php:40
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/content-none.php:26
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/class-mwt-google-font-control.php:53
+msgid "Font Variants"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/class-mwt-google-font-control.php:65
+msgid "Font Subsets"
+msgstr ""
+
+#. translators: %s: comment author link
+#: wp-content/themes/iqconnetik/inc/customizer/class-mwt-theme-comments-walker.php:42
+msgid "%s"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/class-mwt-theme-comments-walker.php:56
+msgid "%1$s "
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/class-mwt-theme-comments-walker.php:65
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/class-mwt-theme-comments-walker.php:74
+msgid "Edit"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:657
+msgid "Transparent"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:661, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:787
+msgid "Darker"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:663, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:791
+msgid "Main 2"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:681
+msgid "Container width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:682
+msgid "Full width"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:694, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:721, wp-content/themes/iqconnetik/inc/customizer/google-fonts.php:12005
+msgid "Inherit"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:695
+msgid "9px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:697
+msgid "11px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:698
+msgid "12px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:699
+msgid "13px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:700
+msgid "14px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:702
+msgid "16px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:703
+msgid "17px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:704
+msgid "18px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:705
+msgid "19px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:707
+msgid "21px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:708
+msgid "22px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:709
+msgid "24px"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:722
+msgid "100"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:723
+msgid "200"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:724
+msgid "300"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:725
+msgid "400"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:726
+msgid "500"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:727
+msgid "600"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:728
+msgid "700"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:729
+msgid "800"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:730
+msgid "900"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:742, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:763
+msgid "0.1em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:743, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:764
+msgid "0.2em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:744, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:765
+msgid "0.3em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:745, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:766
+msgid "0.4em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:746, wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:767
+msgid "0.5em"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:788
+msgid "Dark Blue"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-helpers.php:789
+msgid "Black"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/customizer/customizer-woocommerce.php:149
+msgid "The order totals have been updated. Please confirm your order by pressing the \"Place order\" button at the bottom of the page."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
+msgid "Install Required Plugins"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:341
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:343
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:345
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:346
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:347
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:353
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:359
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:365
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:371
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:377
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:383
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:393
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:398
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:931, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2693, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3767
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:400, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3336
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3121
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:405
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:407
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:408
+msgid "Dismiss this notice"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:409
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:410
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:620
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:621
+msgid "Update Required"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1043
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1043, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1040
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1040
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1229, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3117
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2125
+msgid "TGMPA v%s"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2426
+msgid "Required"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2429
+msgid "Recommended"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2446
+msgid "WordPress Repository"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2449
+msgid "External Source"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2452
+msgid "Pre-Packaged"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2470
+msgid "Not Installed"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2476
+msgid "Active"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2474
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2486
+msgid "Update recommended"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2484
+msgid "Requires Update"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2482
+msgid "Required Update not Available"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2495
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2543
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2547
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2551
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2555
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2641
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2649
+msgid "Installed version:"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2657
+msgid "Minimum required version:"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2669
+msgid "Available version:"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2693
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2708
+msgid "Plugin"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2709
+msgid "Source"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2710
+msgid "Type"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2714
+msgid "Version"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2715
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2772
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2778
+msgid "Activate %2$s"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2767
+msgid "Install %2$s"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2850
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2885, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:241
+msgid "Install"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2891
+msgid "Update"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2894, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:248
+msgid "Activate"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2928
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2926
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2971
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2969
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3077
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3103
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3335
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3685
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3687
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3699
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3701, wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3693
+msgid "%1$s done."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3702
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3704
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3691
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3694
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3696
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3682
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:46
+msgid "Theme Widgets"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:53
+msgid "Iqconnetik Options for Theme"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:60
+msgid "MWT Addons for Elementor"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:67
+msgid "UBackup"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:73
+msgid "MailChimp"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:78
+msgid "Classic Widgets"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:83
+msgid "WordPress SEO by Yoast"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:88
+msgid "Envato Market"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:94
+msgid "Widget CSS Classes"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:99
+msgid "Contact Form 7"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:104
+msgid "Elementor"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:109
+msgid "Simply Schedule Appointments"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:116
+msgid "WooCommerce"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:236
+msgid "Required plugins:"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:255
+msgid "Install and Activate plugins"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:454
+msgid "Done"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:455
+msgid "Installing..."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:456
+msgid "Activating..."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:457
+msgid "Ajax error"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:458
+msgid "TGMPA Ajax error"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:475
+msgid "Forbidden"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:483
+msgid "No Plugins to Process"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:510
+msgid "Activating Plugin..."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:526
+msgid "Installing Plugin..."
+msgstr ""
+
+#: wp-content/themes/iqconnetik/inc/tgm-plugin-activation/plugins.php:541
+msgid "Success"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/options/taxonomies/category.php:16
+msgid "Category layout"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/options/taxonomies/category.php:22
+msgid "Items gap (for grid layouts)"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/options/taxonomies/category.php:23
+msgid "Gap between elements in pixels"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/options/taxonomies/category.php:29
+msgid "Sidebar position"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/options/taxonomies/category.php:30
+msgid "Sidebar position for category"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/footer/footer-totop.php:27
+msgid "Go to top"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/header/header-1.php:65, wp-content/themes/iqconnetik/template-parts/header/header-2.php:63, wp-content/themes/iqconnetik/template-parts/header/header-3.php:60
+msgid "Side Menu Toggler"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/header/header-1.php:79, wp-content/themes/iqconnetik/template-parts/header/header-2.php:72, wp-content/themes/iqconnetik/template-parts/header/header-3.php:74
+msgid "Top Menu"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/header/header-1.php:101, wp-content/themes/iqconnetik/template-parts/header/header-2.php:94, wp-content/themes/iqconnetik/template-parts/header/header-3.php:96
+msgid "Top Menu Close"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/header/header-1.php:94, wp-content/themes/iqconnetik/template-parts/header/header-1.php:113, wp-content/themes/iqconnetik/template-parts/header/header-2.php:87, wp-content/themes/iqconnetik/template-parts/header/header-2.php:106, wp-content/themes/iqconnetik/template-parts/header/header-3.php:89, wp-content/themes/iqconnetik/template-parts/header/header-3.php:108
+msgid "Top Menu Toggler"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/header/header-search.php:28
+msgid "Search Dropdown Toggler"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/title/title-text.php:17
+msgid "Search Results for: "
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/title/title-text.php:15
+msgid "Search"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/woocommerce/single-product/related.php:28
+msgid "Related products"
+msgstr ""
+
+#: wp-content/themes/iqconnetik/template-parts/blog/cols/content-chat.php:58, wp-content/themes/iqconnetik/template-parts/blog/cols/content-link.php:59, wp-content/themes/iqconnetik/template-parts/blog/cols/content-quote.php:50, wp-content/themes/iqconnetik/template-parts/blog/cols/content-status.php:55, wp-content/themes/iqconnetik/template-parts/blog/cols/content.php:66, wp-content/themes/iqconnetik/template-parts/blog/default/content-chat.php:58, wp-content/themes/iqconnetik/template-parts/blog/default/content-link.php:63, wp-content/themes/iqconnetik/template-parts/blog/default/content-quote.php:31, wp-content/themes/iqconnetik/template-parts/blog/default/content-status.php:30, wp-content/themes/iqconnetik/template-parts/blog/default/content.php:71, wp-content/themes/iqconnetik/template-parts/blog/default-half-image/content-chat.php:58, wp-content/themes/iqconnetik/template-parts/blog/default-half-image/content-link.php:63, wp-content/themes/iqconnetik/template-parts/blog/default-half-image/content-quote.php:31, wp-content/themes/iqconnetik/template-parts/blog/default-half-image/content-status.php:30, wp-content/themes/iqconnetik/template-parts/blog/default-half-image/content.php:71, wp-content/themes/iqconnetik/template-parts/blog/default-with-background/content-chat.php:58, wp-content/themes/iqconnetik/template-parts/blog/default-with-background/content-link.php:63, wp-content/themes/iqconnetik/template-parts/blog/default-with-background/content-quote.php:31, wp-content/themes/iqconnetik/template-parts/blog/default-with-background/content-status.php:30, wp-content/themes/iqconnetik/template-parts/blog/default-with-background/content.php:71, wp-content/themes/iqconnetik/template-parts/blog/default-with-padding/content-chat.php:58, wp-content/themes/iqconnetik/template-parts/blog/default-with-padding/content-link.php:63, wp-content/themes/iqconnetik/template-parts/blog/default-with-padding/content-quote.php:31, wp-content/themes/iqconnetik/template-parts/blog/default-with-padding/content-status.php:30, wp-content/themes/iqconnetik/template-parts/blog/default-with-padding/content.php:71
+msgid ""
+msgstr ""

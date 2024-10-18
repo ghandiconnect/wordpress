@@ -1,0 +1,808 @@
+/* root color variables */
+:root {
+	--colorLight: #ffffff;
+    --colorFont: #777777;
+    --colorFontDark: #9d9d9d;
+    --colorBackground: #f5f5f5;
+    --colorBorder: #e1e1e1;
+    --colorDark: #252525;
+    --colorDarkGrey: #1d1d1d;
+    --colorGrey: #f8f8f8;
+    --colorMain: #ff6162;
+    --colorMain2: #7470fc;
+    --colorMain3: #896efd;
+    --colorMain4: #4f74fb;
+    --fontBody: "Poppins" !important;
+    --fontSecondary: "Montserrat" !important;
+}
+
+html body, 
+html body.md-theme-default, 
+html .book-day button.md-whiteframe.selectable, 
+html .book-day button.md-whiteframe.disabled, 
+html .book-day button.md-whiteframe.selectable, 
+html .book-day button.md-whiteframe.disabled {
+    font-family: var(--fontBody);
+}
+
+html .md-body-1, 
+html .mdc-typography--body1, 
+html p {
+    font-family: var(--fontBody);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    color: var(--colorFont);
+}
+
+html p strong {
+    color: var(--colorDarkGrey);
+    font-weight: 500;
+}
+
+html p {
+    margin-top: 0;
+}
+
+.md-card-content, 
+.md-card-header {
+    padding: 0;
+}
+
+.monthly .book-day button.md-whiteframe.md-whiteframe {
+    border: 1px solid transparent;
+    border-radius: 0;
+    width: 100%;
+}
+
+.book-day button.md-whiteframe.disabled {
+    background-color: transparent;
+}
+
+.book-day button.md-whiteframe.selectable {
+    background-color: var(--colorBackground);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.book-day button.md-whiteframe.selectable>div {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+html .book-day button.md-whiteframe.selectable:focus,
+html .book-day button.md-whiteframe.selectable:hover,
+html .book-day button.md-whiteframe.selectable:focus {
+    background-color: var(--colorLight);
+    border: 1px solid var(--colorMain) !important;
+    transition: all 0.15s linear 0s;
+}
+
+.md-card .md-card-content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* Background color */
+html body,
+html body.md-theme-default {
+  background: transparent;
+  padding: 0;
+}
+
+html .calendar {
+    background: var(--colorLight);
+}
+
+.date-select-headline, 
+.time-select-headline,
+.md-card .md-title,
+.md-headline, 
+.mdc-typography--headline5 {
+    font-family: var(--fontSecondary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: none;
+    word-break: break-word;
+    margin-bottom: 0.65em;
+    color: var(--colorDarkGrey);
+}
+
+@media(max-width: 1024px) {
+    .date-select-headline, 
+    .time-select-headline,
+    .md-card .md-title,
+    .md-headline, 
+    .mdc-typography--headline5 {
+        font-size: 20px;
+    }
+}
+
+.date-select-headline:first-child, 
+.time-select-headline:first-child,
+.md-card .md-title:first-child,
+.md-headline:first-child, 
+.mdc-typography--headline5:first-child {
+    margin-top: 0;
+}
+
+.mdc-card .md-subhead,
+.md-subheading {
+    font-family: var(--fontBody);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--colorFont);
+    opacity: 1;
+}
+
+.mdc-card .md-subhead {
+    margin-bottom: 20px;
+}
+
+
+/* Accent color and accent contrast */
+html .md-theme-default.md-button:not([disabled]).md-primary.md-icon-button:not(.md-raised),
+html .select2-results__options .select2-results__option[aria-selected=true],
+html .md-theme-default.md-button:not([disabled]).md-primary:not(.md-icon-button):not(.md-mini),
+html .md-theme-default.md-input-container.md-input-focused label,
+html .md-theme-default.md-input-container.md-input-focused .md-icon:not(.md-icon-delete),
+html .md-theme-default.time-select.md-button:not([disabled]).md-raised:not(.md-icon-button),
+html .appointment-actions .md-button,
+html .md-theme-default.md-checkbox.md-primary .md-ink-ripple,
+html .md-theme-default.md-radio.md-primary .md-ink-ripple,
+html .md-theme-default.md-radio.md-primary.md-checked .md-ink-ripple {
+  color: var(--colorMain);
+}
+ 
+html .md-card.selectable.light-green:hover,
+html .md-card.selectable.light-green:focus,
+html .md-theme-default.md-button:not([disabled]).md-primary.md-raised,
+html .md-theme-default.md-button:not([disabled]).md-primary.md-fab,
+html .md-theme-default.md-button:not([disabled]).md-primary.md-raised:hover,
+html .md-theme-default.md-button:not([disabled]).md-primary.md-raised:focus,
+html .md-theme-default.md-button:not([disabled]).md-primary.md-fab:hover,
+html .md-theme-default.md-button:not([disabled]).md-primary.md-fab:focus,
+html .md-theme-default.md-input-container.md-input-focused:after,
+html .md-theme-default.time-select.md-button:not([disabled]).md-raised:not(.md-icon-button):hover,
+html .md-theme-default.time-select.md-button:not([disabled]).md-raised:not(.md-icon-button):focus {
+  background-color: var(--colorMain);
+}
+
+html .md-card.selectable.light-green {
+  border-left-color: var(--colorMain);
+}
+
+html .select2-search--dropdown .select2-search__field:focus {
+  border-bottom-color: var(--colorMain);
+}
+
+html .md-theme-default.md-spinner .md-spinner-path {
+  stroke: var(--colorMain);
+}
+
+ /* Checkboxes and Radios */
+html .md-theme-default.md-checkbox.md-primary.md-checked .md-checkbox-container {
+  background-color: var(--colorMain);
+  border-color: var(--colorMain);
+}
+
+html .md-theme-default.md-radio.md-primary .md-radio-container:after {
+  background-color: var(--colorMain);
+}
+
+html .md-theme-default.md-radio.md-primary.md-checked .md-radio-container {
+  border-color: var(--colorMain);
+}
+
+html .ssa_booking_initial_spinner-container .ssa_booking_initial_spinner {
+  border: 4px solid var(--colorLight);
+  border-top-color:  var(--colorMain);
+}
+/* End booking app initial loading spinner */
+
+html body.md-theme-default {
+    padding: 0;
+    color: var(--colorDark);
+    -webkit-font-smoothing: auto;
+    -webkit-text-size-adjust: 100%;
+}
+
+html .md-theme-default.md-card {
+    color: var(--colorDark);
+}
+
+.booking-header .md-subheading {
+    color: var(--colorFont);
+}
+
+.date-select-headline {
+    display: none;
+}
+
+.md-input-container label {
+    color: var(--colorFont);
+}
+
+html body.md-theme-default .select2-dropdown {
+    box-shadow: none;
+    border: 1px solid var(--colorBorder);
+    color: var(--colorDark);
+    max-height: 148px;
+    overflow: hidden;
+}
+
+html body.md-theme-default .select2-results__options .select2-results__option.select2-results__option--highlighted[aria-selected] {
+    background: var(--colorBackground);
+}
+
+.md-backdrop {
+    background-color: rgba(var(--colorDarkGreyRGB), 0.81);
+}
+
+/* title monthly */
+.title.monthly {
+    justify-content: space-between;
+    background: var(--colorMain2);
+}
+
+.title.monthly .monthly-title {
+    margin: 10px 0;
+    font-size: 18px;
+    color: var(--colorLight);
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+@media (min-width:768px) {
+    .title.monthly .monthly-title {
+        margin: 25px 0;
+        font-size: 30px;
+    }
+}
+
+.mdc-icon-button {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+@media (min-width:768px) {
+    .mdc-icon-button {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.prev .mdc-icon-button {
+    border-right: 1px solid rgba(var(--colorLightRGB), .1);
+}
+
+.next .mdc-icon-button {
+    border-left: 1px solid rgba(var(--colorLightRGB), .1);
+}
+
+.mdc-theme-name--default.mdc-icon-button:not(:disabled) .mdc-icon-button__ripple:after, 
+.mdc-theme-name--default.mdc-icon-button:not(:disabled) .mdc-icon-button__ripple:before {
+    background-color: var(--colorMain2);
+}
+
+
+.title.monthly .md-button,
+.title.monthly .md-button .md-icon {
+    color: var(--colorLight);
+}
+
+.calendar.weekly .md-button,
+.calendar.weekly .md-button .md-icon {
+    color: var(--colorDarkGrey);
+}
+
+.calendar.weekly .md-button[disabled] .md-icon
+.title.monthly .md-button[disabled] .md-icon {
+    opacity: .5;
+}
+
+html .md-button:focus {
+    outline: none;
+}
+
+/* calendar monthly */
+
+.calendar.monthly {
+    max-width: 100%;
+}
+
+ul.week {
+    margin: 0;
+    background: var(--colorDark);
+    color: var(--colorLight);
+}
+
+ul.week li {
+    font-size: 14px;
+    letter-spacing: .1em;
+    font-weight: 300;
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 13px 0;
+}
+
+@media (min-width:768px) {
+    ul.week li {
+        padding: 23px 0;
+    }
+}
+
+.calendar div.calendar-days {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.calendar.monthly .book-day {
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border-right: 1px solid var(--colorBorder);
+    border-bottom: 1px solid var(--colorBorder);
+}
+
+.calendar.monthly div.calendar-days {
+    border-left: 1px solid var(--colorBorder);
+    padding: 0;
+}
+
+.book-day button.md-whiteframe {
+    padding: 10px;
+    min-height: 40px;
+}
+
+@media (max-width:767px) {
+    .book-day button.md-whiteframe {
+        padding: 0;
+        border-width: 4px;
+    }  
+}
+
+.calendar.monthly .md-body-1 {
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+@media (min-width:768px) {
+    .book-day button.md-whiteframe {
+        padding: 20px 10px 19px;
+        min-height: 99px;
+    }
+
+    .calendar.monthly .md-body-1 {
+        font-size: 24px;
+    }
+}
+
+.book-day button.md-whiteframe.disabled,
+.book-day button.md-whiteframe.passive {
+    color: var(--colorFont);
+}
+
+.book-day button.md-whiteframe.selectable .md-body-1 {
+    color: var(--colorDark);
+}
+
+.book-day button.md-whiteframe.selectable .md-title {
+    color: var(--colorDarkGrey);
+    font-family: var(--fontSecondary);
+}
+
+.book-day button.md-whiteframe.selectable.selected .md-body-1, 
+.book-day button.md-whiteframe.selectable.selected .md-title {
+    color: var(--colorLight);
+}
+
+.book-day button.md-whiteframe.selectable.selected {
+    background-color: var(--colorMain) !important;
+}
+
+.book-day button.md-whiteframe.selectable:hover .md-body-1, 
+.book-day button.md-whiteframe.selectable:hover .md-title {
+    color: var(--colorMain);
+}
+
+/* calendar weekly/shortly */
+
+@media (min-width:960px) {
+    .calendar.shortly .book-day:first-child,
+    .calendar.weekly .book-day:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:959px) {
+    .calendar.shortly .book-day,
+    .calendar.weekly .book-day {
+        margin-left: 0;
+    }
+}
+
+.calendar.shortly .book-day,
+.calendar.weekly .book-day {
+    border: 1px solid var(--colorBorder);
+}
+
+.calendar.shortly .book-day button,
+.calendar.weekly .book-day button {
+    box-shadow: none;
+}
+
+.book-day button.md-whiteframe {
+    border: 1px solid transparent !important;
+}
+
+html .calendar.shortly .book-day button.md-whiteframe.selectable:hover,
+html .calendar.weekly .book-day button.md-whiteframe.selectable:hover {
+    border-color: var(--colorMain) !important;
+}
+
+/* time select */
+html .mdc-card,
+html .time-select:not(.mdc-touch-target-wrapper) {
+    background: var(--colorBackground);
+    padding: 40px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.back-button-wrapper {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+    html .mdc-card,
+    html .time-select:not(.mdc-touch-target-wrapper) {
+        padding: 15px;
+    }
+}
+
+.time-listing-icon {
+    fill: var(--colorDarkGrey);
+}
+
+ul.time-listing li {
+    padding: 4px 2px;
+}
+
+.md-input-container:after {
+    display: none;
+}
+
+/* form */
+.customer-information-container {
+    gap: 10px;
+}
+
+.mdc-text-field__icon--leading {
+    display: none !important;
+}
+
+html .mdc-text-field {
+    padding: 0;
+    overflow: visible;
+}
+
+html .mdc-text-field:before {
+    display: none;
+}
+
+html .mdc-text-field {
+    height: auto;
+    min-height: 50px;
+    background-color: transparent !important;
+    border: none;
+    border-radius: 0;
+}
+
+html .mdc-text-field .mdc-text-field__input,
+html .foxy-phone-container .vti__input {
+	box-shadow: none;
+    font-family: var(--fontBody);
+	line-height: 24px;
+    text-decoration: none;
+	text-transform: none;
+	max-width: 100%;
+    min-width: 0;
+    height: 31px;
+    border: 1px solid var(--colorBorder);
+    background: var(--colorLight);
+    border-radius: 0;
+	color: var(--colorFont);
+    font-weight: 300;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    font-size: 16px;
+    width: 100%;
+    background-clip: border-box;
+    caret-color: var(--colorFont);
+    margin: 0 !important;
+    transition: all .15s ease-in-out;
+}
+
+html .mdc-text-field textarea.mdc-text-field__input {
+    margin-bottom: 1px !important;
+}
+
+html .mdc-text-field .mdc-text-field__input {
+    color: var(--colorFont);
+}
+
+html .mdc-text-field.mdc-text-field--filled .mdc-floating-label {
+    max-width: calc(100% - 20px);
+    left: 20px !important;
+    background: var(--colorLight);
+    transition: all .15s cubic-bezier(.4,0,.2,1);
+}
+
+.mdc-textfield.mdc-text-field--focused:not(.mdc-text-field--textarea) .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--textarea) .mdc-floating-label--float-above {
+    transform: translateY(-210%) scale(1);
+    color: var(--colorFont);
+    font-size: 14px;
+    left: 10px !important;
+}
+
+.mdc-textfield.mdc-text-field--focused.mdc-text-field--textarea .mdc-floating-label,
+.mdc-text-field--filled.mdc-text-field--textarea .mdc-floating-label--float-above {
+    transform: none;
+    top: 10px;
+    left: 20px !important;
+    opacity: 0;
+    color: var(--colorFont);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: var(--colorFont);
+}
+
+/* label */
+html .mdc-text-field .mdc-floating-label {
+    color: var(--colorFont);
+}
+
+.mdc-text-field--textarea .mdc-floating-label {
+    top: 10px;
+}
+
+.mdc-floating-label {
+    font-family: var(--fontBody);
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1;
+    text-decoration: none;
+	text-transform: none;
+}
+
+.mdc-floating-label::after {
+    color: var(--colorMain);
+}
+
+.mdc-text-field .mdc-floating-label {
+    z-index: 1;
+}
+
+html .mdc-text-field .mdc-line-ripple:after, 
+html .mdc-text-field .mdc-line-ripple:before {
+    display: none;
+}
+
+html .mdc-text-field .mdc-text-field__ripple:after, 
+html .mdc-text-field .mdc-text-field__ripple:before {
+    display: none;
+}
+
+/* tel */
+html .foxy-phone-container.textfield-container .vue-tel-input {
+    margin: 0;
+    top: 0;
+}
+
+html .foxy-phone-container .vti__input {
+    padding-left: 0;
+    border-left: 0;
+}
+
+html .foxy-phone-container.textfield-container {
+    border: none !important;
+}
+
+html .vti__dropdown,
+html .vti__dropdown:hover,
+.vti__dropdown.disabled, 
+.vti__dropdown.open {
+    background-color: var(--colorLight);
+    border: 1px solid var(--colorBorder);
+    border-right: 0;
+}
+
+html .foxy-phone-container.textfield-container .mdc-floating-label {
+    display: none;
+}
+
+.mdc-card__actions {
+    margin-top: 50px;
+}
+
+/* buttons */
+html .mdc-button {
+    height: auto;
+}
+
+html button.mdc-button:not(:disabled) {
+    box-shadow: none;
+    position: relative;
+    min-height: 50px;
+    cursor: pointer;
+    white-space: normal;
+    -webkit-font-smoothing: auto;
+	text-transform: none;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 11px 19px;
+    color: var(--colorLight);
+    background: transparent;
+    z-index: 1;
+    transition: all .2s ease-in-out;
+}
+
+html button.mdc-button:not(:disabled):before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    left: -2px;
+    top: -2px;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background: linear-gradient(to right, var(--colorMain3) 0%, var(--colorMain4) 100%);
+    z-index: -1;
+    opacity: 1;
+    transition: all .15s ease-in-out;
+}
+
+html button.mdc-button:not(:disabled) .mdc-button__label {
+    white-space: normal;
+    -webkit-font-smoothing: auto;
+}
+
+html button.mdc-button:not(:disabled) .mdc-button__ripple,
+html button.mdc-button:not(:disabled):hover .mdc-button__ripple {
+    border: none;
+    border-radius: 0;
+}
+
+html button.mdc-button:not(:disabled) .mdc-button__ripple::after,
+html button.mdc-button:not(:disabled) .mdc-button__ripple::before {
+    background: transparent;
+}
+
+html button.mdc-button:not(:disabled):hover {
+    color: var(--colorDarkGrey);
+	background: transparent;
+    border: 2px solid var(--colorMain2);
+}
+
+html button.mdc-button:not(:disabled):hover::before {
+    opacity: 0;
+}
+
+.appt-actions-btns-wrapper {
+    gap: 4px;
+}
+
+html .mdc-card {
+    font-family: var(--fontBody);
+    color: var(--colorDarkGrey);
+}
+
+.mdc-card__actions {
+    padding: 0;
+    border: none;
+}
+
+html .md-card .md-card-actions {
+    padding-top: 34px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    justify-content: center;
+}
+
+html .md-theme-default.md-dialog-container .md-dialog {
+    color: var(--colorDark);
+}
+
+.md-input-container .md-count, 
+.md-input-container .md-error {
+    left: auto;
+    right: 4px;
+    bottom: 0;
+}
+
+html .md-theme-default.md-input-container.md-input-focused input, 
+html .md-theme-default.md-input-container.md-input-focused textarea {
+    text-shadow: 0 0 0 rgba(var(--colorDarkGreyRGB), 1);
+}
+
+.md-card .md-card-actions .md-button {
+    margin-right: 4px;
+}
+
+.md-card .md-card-actions .md-button+.md-button {
+    margin-left: 0;
+}
+
+html .appointment-actions {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.appointment-actions .md-subheading {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.md-dialog-actions .md-button {
+    padding: 0 4px;
+}
+
+.md-dialog-actions {
+    padding: 8px 24px 24px;
+}
+
+@media screen and (max-width: 600px) {
+    .md-dialog .md-dialog-actions {
+        display: block;
+        padding: 8px 8px 24px;
+    }
+}
+
+.confirm .md-card .md-card-actions .md-button {
+    margin-bottom: 4px;
+}
+
+.mdc-dialog .mdc-dialog__surface {
+    border-radius: 0;
+    background-color: var(--colorBackground);
+}
+
+.mdc-dialog .mdc-dialog__surface .md-title {
+    color: var(--colorDarkGrey) !important;
+}
+
+.mdc-dialog .mdc-dialog__container .mdc-dialog__content p,
+.mdc-dialog .mdc-dialog__container .mdc-dialog__content .md-subhead {
+    color: var(--colorFont) !important;
+}
+
+.mdc-dialog__button {
+    text-align: center;
+}
+
+.mdc-dialog .mdc-dialog__scrim, 
+.mdc-dialog .mdc-dialog__surface-scrim {
+    background-color: rgba(var(--colorDarkGreyRGB), 0.7);
+}
